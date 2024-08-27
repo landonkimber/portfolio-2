@@ -5,7 +5,7 @@ import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import "./App.css";
 
-import Signature from "./components/Signature.jsx";
+// import Signature from "./components/Signature.jsx";
 
 function App() {
   const aboutRef = useRef(null);
