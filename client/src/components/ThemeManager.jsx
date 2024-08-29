@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useSettings } from "../contexts/SettingsContext";
 
 const ThemeManager = () => {
-  const { theme } = useSettings();
+  const { theme, color } = useSettings();
 
   useEffect(() => {
     // Remove previous theme
