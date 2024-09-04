@@ -1,10 +1,10 @@
 /* SETTINGS PAGE POSITIONING */
 
-.settings-content {
+.page-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .settings-header h1 {
-  font-size: 5rem;
+  font-size: 9vh;
   width: 66%;
   border-bottom: black 1px solid;
 }
@@ -77,6 +77,10 @@
   font-size: 1rem;
 }
 
+.settings-checklist-option :hover {
+  cursor: pointer;
+}
+
 .settings-checkbox {
   margin-right: 0.5rem;
 }
@@ -85,30 +89,36 @@
   font-size: 3rem;
 }
 
-.settings-color-menu {
+.settings-theme-menu {
   width: 40%;
   display: flex;
   flex-direction: column;
   align-items: left;
   text-align: left;
 }
-.settings-color-menu h2 {
+.settings-theme-menu h2 {
   font-size: 3rem;
 }
 
 /* NAVBAR POSITIONING/(STYLING FOR NOW) */
+
+.navbar[data-navbar-side="Left-Handed"] {
+  left: 20px;
+}
+
+.navbar[data-navbar-side="Right-Handed"] {
+  right: 20px;
+}
+
 .navbar {
   position: fixed;
   top: 50%;
-  right: 20px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 25px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 }
 
@@ -120,90 +130,10 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: #f0f0f0;
-  color: #333;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
-.nav-item.active,
-.nav-item:hover {
-  background-color: #278dec;
-  color: white;
-}
-
 .nav-item i {
   font-size: 20px;
-}
-
-/* SIGNATURE POSITION AND STYLING */
-.signature {
-  position: fixed;
-  bottom: 2px;
-  left: 2px;
-  transform: rotate(45deg) translateY(32px) translateX(-32px);
-  transition: all 1s;
-  opacity: 0;
-}
-
-.signature.visible {
-  opacity: 1;
-  transform: rotate(45deg) translateY(0) translateX(0);
-}
-
-.signature-container {
-  position: relative;
-}
-
-.heart-icon {
-  color: #2281ee;
-  width: 80px;
-  height: 80px;
-}
-
-.signature-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-45deg);
-  text-align: center;
-}
-
-.signature-text p {
-  color: white;
-  font-size: 12px;
-  margin: 0;
-}
-
-@media (min-width: 640px) {
-  .heart-icon {
-    width: 96px;
-    height: 96px;
-  }
-
-  .signature-text p {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: 768px) {
-  .heart-icon {
-    width: 128px;
-    height: 128px;
-  }
-
-  .signature-text p {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .heart-icon {
-    width: 160px;
-    height: 160px;
-  }
-
-  .signature-text p {
-    font-size: 18px;
-  }
 }

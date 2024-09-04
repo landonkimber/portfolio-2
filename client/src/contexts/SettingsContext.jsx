@@ -1,17 +1,27 @@
+// src/contexts/SettingsContext.jsx
 import React, { createContext, useState, useContext } from "react";
+import dayjs from "dayjs";
 
 const SettingsContext = createContext();
 
 export const SettingsProvider = ({ children }) => {
-  const [theme, setTheme] = useState("simple");
-  const [color, setColor] = useState("light");
+  // Default color based on time of day
+  var defaultColor = "Dark";
+  if (dayjs().hour() > 6 && dayjs().hour() < 20) {
+    defaultColor = "Light";
+  }
 
-  const toggleTheme = (newTheme) => {
-    setTheme(newTheme);
-  };
+  // Default settings
+  const [settings, setSettings] = useState({
+    fontSize: "Standard",
+    contentWidth: "Standard",
+    navigationBar: "Right-Handed",
+    theme: "Simple",
+    color: defaultColor,
+  });
 
   return (
-    <SettingsContext.Provider value={{ theme, toggleTheme }}>
+    <SettingsContext.Provider value={{ settings, setSettings }}>
       {children}
     </SettingsContext.Provider>
   );

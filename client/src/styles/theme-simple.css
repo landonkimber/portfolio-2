@@ -1,0 +1,48 @@
+[data-color="dark"] {
+  --primary-text-color: #eceae7;
+  --secondary-text-color: #fb773c;
+  --accent-color: #eb3678;
+  --primary-bg-color: #180161;
+  --secondary-bg-color: #6628a4;
+}
+
+[data-color="light"] {
+  --primary-text-color: #302d27;
+  --secondary-text-color: #e8b86d;
+  --accent-color: #185519;
+  --primary-bg-color: #f5f7f8;
+  --secondary-bg-color: #fcde70;
+}
+
+/* GENERAL STYLING */
+p,
+h2,
+h3 {
+  color: var(--primary-text-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-content {
+  background-color: var(--primary-bg-color);
+}
+
+/* NAVBAR */
+.navbar {
+  background-color: var(--accent-color);
+}
+
+.nav-item.active,
+.nav-item:hover {
+  background-color: #278dec;
+  color: white;
+}
+
+/* WELCOME PAGE */
+
+/* ABOUT PAGE */
+
+/* PROJECTS PAGE */
+
+/* CONTACT ME PAGE */
+
+/* SETTINGS PAGE */

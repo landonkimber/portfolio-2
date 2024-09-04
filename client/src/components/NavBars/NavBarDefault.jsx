@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaEnvelope } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
+import { useSettings } from "../../contexts/SettingsContext";
 
 const NavBarDefault = ({ scrollToSection, currentSection }) => {
+  const { settings } = useSettings();
   console.log(`Current section NAVBAR: ${currentSection}`);
+  console.log(`settings: ${settings.navigationBar}`);
+
   return (
-    <nav className="navbar">
+    <nav className="navbar" data-navbar-side={settings.navigationBar}>
       <a
         className={`nav-item ${currentSection === "home" ? "active" : ""}`}
         data-tooltip="Home"

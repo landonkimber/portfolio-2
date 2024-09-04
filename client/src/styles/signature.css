@@ -1,0 +1,81 @@
+[data-signature-color="dark"] {
+  --signature-text-color: #bd1919;
+  --signature-background-color: #e6e9e9;
+}
+
+[data-signature-color="light"] {
+  --signature-text-color: #e0ebeb;
+  --signature-background-color: #67c1eb;
+}
+
+.signature {
+  position: fixed;
+  bottom: 2px;
+  left: 2px;
+  transform: rotate(45deg) translateY(32px) translateX(-32px);
+  transition: all 1s;
+  opacity: 0;
+}
+
+.signature.visible {
+  opacity: 1;
+  transform: rotate(45deg) translateY(0) translateX(0);
+}
+
+.signature-container {
+  position: relative;
+}
+
+.heart-icon {
+  color: var(--signature-background-color);
+  width: 80px;
+  height: 80px;
+}
+
+.signature-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+  text-align: center;
+}
+
+.signature-text p {
+  color: var(--signature-text-color);
+  font-family: Arial;
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (min-width: 640px) {
+  .heart-icon {
+    width: 96px;
+    height: 96px;
+  }
+
+  .signature-text p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  .heart-icon {
+    width: 128px;
+    height: 128px;
+  }
+
+  .signature-text p {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heart-icon {
+    width: 160px;
+    height: 160px;
+  }
+
+  .signature-text p {
+    font-size: 18px;
+  }
+}
