@@ -1,9 +1,9 @@
 [data-color="dark"] {
-  --primary-text-color: #00c51a;
+  --primary-text-color: #ff00bb;
 }
 
 [data-color="light"] {
-  --primary-text-color: #d500c4;
+  --primary-text-color: #eeff00;
 }
 
 p,

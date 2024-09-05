@@ -12,14 +12,14 @@
 
 [data-color="light"] {
   /* LIGHT COLORS FOR BG */
-  --primary-bg-color: #e7f1f6;
-  --secondary-bg-color: #c1ece3;
+  --primary-bg-color: #f5f5f5;
+  --secondary-bg-color: #c1e5ec;
 
   /* DARK COLORS FOR TEXT */
-  --primary-text-color: #323d47;
-  --secondary-text-color: #53d3b5;
+  --primary-text-color: #424242;
+  --secondary-text-color: #229799;
 
-  --accent-color: #52adf7;
+  --accent-color: #48cfcb;
 }
 
 [data-color="colorful"] {
@@ -84,6 +84,16 @@ h1 {
 
 /* SETTINGS PAGE */
 /* ----------------------------------------------------------- */
+.settings-header h1 {
+  border-bottom: var(--secondary-text-color) 1px solid;
+}
+.settings-theme-container {
+  color: var(--primary-text-color);
+  background-color: var(--secondary-bg-color);
+}
+.settings-checklist-items {
+  color: var(--primary-text-color);
+}
 
 /* SIGNATURE */
 /* ----------------------------------------------------------- */
