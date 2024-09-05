@@ -1,17 +1,35 @@
 [data-color="dark"] {
-  --primary-text-color: #eceae7;
-  --secondary-text-color: #fb773c;
-  --accent-color: #eb3678;
+  /* DARK COLORS FOR BG */
   --primary-bg-color: #180161;
   --secondary-bg-color: #6628a4;
+
+  /* LIGHT COLORS FOR TEXT */
+  --primary-text-color: #eceae7;
+  --secondary-text-color: #d6ff4e;
+
+  --accent-color: #35d660;
 }
 
 [data-color="light"] {
-  --primary-text-color: #302d27;
-  --secondary-text-color: #e8b86d;
-  --accent-color: #185519;
-  --primary-bg-color: #f5f7f8;
-  --secondary-bg-color: #fcde70;
+  /* LIGHT COLORS FOR BG */
+  --primary-bg-color: #e7f1f6;
+  --secondary-bg-color: #c1ece3;
+
+  /* DARK COLORS FOR TEXT */
+  --primary-text-color: #323d47;
+  --secondary-text-color: #53d3b5;
+
+  --accent-color: #52adf7;
+}
+
+[data-color="colorful"] {
+  --primary-bg-color: #d04848;
+  --secondary-bg-color: #6895d2;
+
+  --primary-text-color: #f2efea;
+  --secondary-text-color: #fde767;
+
+  --accent-color: #f3b95f;
 }
 
 /* GENERAL STYLING */
@@ -22,27 +40,57 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h1 {
+  color: var(--secondary-text-color);
+  font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
+}
+
 .page-content {
   background-color: var(--primary-bg-color);
+  box-shadow: var(--secondary-bg-color) 15;
 }
 
 /* NAVBAR */
+/* ----------------------------------------------------------- */
 .navbar {
-  background-color: var(--accent-color);
+  background: linear-gradient(
+    to bottom right,
+    var(--accent-color),
+    color-mix(in srgb, var(--accent-color) 80%, var(--secondary-text-color))
+  );
+  box-shadow: 0 0 7px
+    color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
+  color: var(--primary-bg-color);
 }
 
 .nav-item.active,
 .nav-item:hover {
-  background-color: #278dec;
-  color: white;
+  cursor: pointer;
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
 }
 
 /* WELCOME PAGE */
+/* ----------------------------------------------------------- */
 
 /* ABOUT PAGE */
+/* ----------------------------------------------------------- */
 
 /* PROJECTS PAGE */
+/* ----------------------------------------------------------- */
 
 /* CONTACT ME PAGE */
+/* ----------------------------------------------------------- */
 
 /* SETTINGS PAGE */
+/* ----------------------------------------------------------- */
+
+/* SIGNATURE */
+/* ----------------------------------------------------------- */
+.heart-icon {
+  color: var(--accent-color);
+}
+
+.signature p {
+  color: var(--primary-text-color);
+}

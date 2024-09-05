@@ -12,7 +12,6 @@ import Signature from "./components/Signature.jsx";
 
 import "./App.css";
 import "./styles/global.css";
-import "./styles/signature.css";
 
 function App() {
   const { settings } = useSettings();

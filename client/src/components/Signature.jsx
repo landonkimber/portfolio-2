@@ -23,10 +23,7 @@ const Signature = () => {
   }, []);
 
   return (
-    <footer
-      className={`signature ${isVisible ? "visible" : ""}`}
-      data-signature-color={settings.color.toLowerCase()}
-    >
+    <footer className={`signature ${isVisible ? "visible" : ""}`}>
       <div className="signature-container">
         <FaHeart className="heart-icon" />
         <div className="signature-text">
