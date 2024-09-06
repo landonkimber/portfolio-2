@@ -16,6 +16,8 @@ import "./styles/global.css";
 function App() {
   const { settings } = useSettings();
 
+  console.log(`Current settings: ${JSON.stringify(settings)}`);
+
   const sectionRefs = {
     home: useRef(null),
     about: useRef(null),

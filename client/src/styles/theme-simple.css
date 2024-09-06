@@ -1,25 +1,27 @@
 [data-color="dark"] {
   /* DARK COLORS FOR BG */
   --primary-bg-color: #180161;
-  --secondary-bg-color: #6628a4;
+  --secondary-bg-color: #4040c8;
 
   /* LIGHT COLORS FOR TEXT */
   --primary-text-color: #eceae7;
-  --secondary-text-color: #d6ff4e;
+  --secondary-text-color: #72de6a;
 
-  --accent-color: #35d660;
+  --accent-color: #2be4aa;
+  --white: #dcdde2;
 }
 
 [data-color="light"] {
   /* LIGHT COLORS FOR BG */
-  --primary-bg-color: #f5f5f5;
-  --secondary-bg-color: #c1e5ec;
+  --primary-bg-color: #f5f7f8;
+  --secondary-bg-color: #ffc55a;
 
   /* DARK COLORS FOR TEXT */
-  --primary-text-color: #424242;
-  --secondary-text-color: #229799;
+  --primary-text-color: #00215e;
+  --secondary-text-color: #2c4e80;
 
-  --accent-color: #48cfcb;
+  --accent-color: #fc4100;
+  --white: #f3f4f5;
 }
 
 [data-color="colorful"] {
@@ -30,6 +32,7 @@
   --secondary-text-color: #fde767;
 
   --accent-color: #f3b95f;
+  --white: #ebeff2;
 }
 
 /* GENERAL STYLING */
@@ -48,6 +51,10 @@ h1 {
 .page-content {
   background-color: var(--primary-bg-color);
   box-shadow: var(--secondary-bg-color) 15;
+}
+
+.basic-header h1 {
+  border-bottom: var(--secondary-text-color) 1px solid;
 }
 
 /* NAVBAR */
@@ -82,14 +89,42 @@ h1 {
 /* CONTACT ME PAGE */
 /* ----------------------------------------------------------- */
 
+.contact-email-form {
+  background: linear-gradient(
+    to bottom right,
+    var(--secondary-bg-color),
+    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color))
+  );
+
+  box-shadow: 0 0 4px
+    color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
+  color: var(--primary-text-color);
+}
+
+.contact-email-form textarea,
+input {
+  background-color: var(--white);
+  color: var(--primary-text-color);
+}
+
+.contact-send-btn button {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+}
+
 /* SETTINGS PAGE */
 /* ----------------------------------------------------------- */
-.settings-header h1 {
-  border-bottom: var(--secondary-text-color) 1px solid;
-}
+
 .settings-theme-container {
   color: var(--primary-text-color);
-  background-color: var(--secondary-bg-color);
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color)),
+    var(--secondary-bg-color)
+  );
+
+  box-shadow: 0 0 4px
+    color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
 }
 .settings-checklist-items {
   color: var(--primary-text-color);

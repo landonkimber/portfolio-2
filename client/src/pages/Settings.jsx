@@ -29,11 +29,14 @@ const Settings = () => {
   );
 
   return (
-    <div className="page-content" data-color={settings.color.toLowerCase()}>
-      <div className="settings-header">
+    <main className="page-content" data-color={settings.color.toLowerCase()}>
+      <header className="basic-header" data-page-width={settings.contentWidth}>
         <h1>Settings</h1>
-      </div>
-      <div className="settings-container">
+      </header>
+      <body
+        className="content-container"
+        data-page-width={settings.contentWidth}
+      >
         <div className="settings-checklist-container">
           <h2>General</h2>
           <h3>Font Size</h3>
@@ -98,8 +101,8 @@ const Settings = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </body>
+    </main>
   );
 };
 

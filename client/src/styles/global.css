@@ -8,6 +8,33 @@
   width: 100%;
 }
 
+.basic-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+}
+
+.basic-header h1 {
+  text-align: left;
+  font-size: 9vh;
+  width: 100%;
+}
+
+[data-page-width="Standard"] {
+  width: 55%;
+}
+
+[data-page-width="Wide"] {
+  width: 80%;
+}
+.content-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+}
+
 /* NAVBAR */
 /* ------------------------------------------ */
 .navbar[data-navbar-side="Left-Handed"] {
@@ -55,34 +82,78 @@
 /* ------------------------------------------ */
 /* CONTACT PAGE */
 /* ------------------------------------------ */
-/* SETTINGS PAGE */
-/* ------------------------------------------ */
-.settings-header {
+
+.contact-email-form {
+  border-radius: 30px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 15%;
+  flex-direction: column;
+  align-items: start;
+  width: 50%;
+  height: 80%;
+  font-size: 140%;
+}
+
+.contact-input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-top: 2vh;
+  margin-left: 10%;
+  width: 80%;
+}
+
+.contact-input-field h2 {
+  margin-bottom: 1vh;
+}
+
+.contact-input-field input {
+  border: none;
   width: 100%;
+  height: 4vh;
+  font-size: 80%;
+  border-radius: 5px;
 }
 
-.settings-header h1 {
-  font-size: 9vh;
-  width: 66%;
-  border-bottom: black 1px solid;
+.contact-email-form textarea {
+  border: none;
+  width: 100%;
+  resize: none;
+  height: 31vh;
+  font-size: 100%;
+  border-radius: 5px;
 }
 
-.settings-container {
+.contact-send-btn {
+  height: 100%;
+  margin-top: 3vh;
+  margin-right: 10%;
+  align-self: flex-end;
+}
+.contact-send-btn button {
+  border: none;
+  padding: 1vh 2vh;
+  font-size: 100%;
+  border-radius: 5px;
+}
+
+.contact-socials-container {
+  border: 1px solid greenyellow;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 60%;
-  width: 66%;
+  align-items: center;
+  width: 50%;
+  height: 80%;
 }
+
+/* SETTINGS PAGE */
+/* ------------------------------------------ */
 
 .settings-theme-container {
   border-radius: 30px;
   padding: 2rem;
   width: 60%;
+  height: 50%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

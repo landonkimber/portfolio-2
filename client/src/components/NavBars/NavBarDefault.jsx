@@ -5,8 +5,6 @@ import { useSettings } from "../../contexts/SettingsContext";
 
 const NavBarDefault = ({ scrollToSection, currentSection }) => {
   const { settings } = useSettings();
-  console.log(`Current section NAVBAR: ${currentSection}`);
-  console.log(`settings: ${settings.navigationBar}`);
 
   return (
     <nav className="navbar" data-navbar-side={settings.navigationBar}>
