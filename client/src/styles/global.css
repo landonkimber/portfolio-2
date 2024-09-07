@@ -1,3 +1,6 @@
+/* Font Vars */
+/* ------------------------------------------ */
+
 /* GENERAL STYLING */
 /* ------------------------------------------ */
 .page-content {
@@ -59,8 +62,8 @@
 
 .nav-item {
   margin: 10px 0;
-  width: 40px;
-  height: 40px;
+  width: 5vh;
+  height: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,9 +91,26 @@
   display: flex;
   flex-direction: column;
   align-items: start;
-  width: 50%;
+  width: 40%;
   height: 80%;
   font-size: 140%;
+}
+
+.contact-or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 10%;
+  margin-top: 25vh;
+  font-size: 8vh;
+  user-select: none;
+}
+
+.contact-email-form h2 {
+  margin-top: 2vh;
+  font-size: 4vh;
+  margin-left: 10%;
 }
 
 .contact-input-field {
@@ -137,13 +157,34 @@
 }
 
 .contact-socials-container {
-  border: 1px solid greenyellow;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 40%;
   height: 80%;
+}
+.contact-socials-container h2 {
+  margin-bottom: 5vh;
+  font-size: 5vh;
+}
+.contact-socials-btn {
+  border: 2px solid transparent;
+  text-decoration: none;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 75%;
+  height: 8vh;
+  margin-bottom: 5vh;
+  font-size: 3vh;
+}
+.contact-socials-btn i {
+  font-size: 4vh;
+  margin-right: 1vw;
+  margin-left: 1vw;
 }
 
 /* SETTINGS PAGE */

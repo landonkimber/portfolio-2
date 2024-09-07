@@ -1,7 +1,14 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { useSettings } from "../contexts/SettingsContext";
-import { FaCheckCircle } from "react-icons/fa";
+import {
+  FaCheckCircle,
+  FaEnvelope,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaFacebook,
+} from "react-icons/fa";
 
 const Contact = () => {
   const form = useRef();
@@ -43,16 +50,17 @@ const Contact = () => {
         data-page-width={settings.contentWidth}
       >
         <form ref={form} onSubmit={sendEmail} className="contact-email-form">
+          <h2>Send me an email! </h2>
           <div className="contact-input-field">
-            <h2 htmlFor="name">Name</h2>
+            <h3 htmlFor="name">Name</h3>
             <input type="text" id="name" name="user_name" required />
           </div>
           <div className="contact-input-field">
-            <h2 htmlFor="email">Email</h2>
+            <h3 htmlFor="email">Email</h3>
             <input type="email" id="email" name="user_email" required />
           </div>
           <div className="contact-input-field">
-            <h2 htmlFor="message">Message</h2>
+            <h3 htmlFor="message">Message</h3>
             <textarea id="message" name="message"></textarea>
           </div>
           <div className="contact-send-btn">
@@ -66,7 +74,50 @@ const Contact = () => {
             )}
           </div>
         </form>
-        <div className="contact-socials-container"></div>
+        <h1 className="contact-or">OR</h1>
+        <div className="contact-socials-container">
+          <h2>Find me at: </h2>
+          <a
+            href="https://github.com/landonkimber"
+            className="contact-socials-btn"
+            id="github"
+          >
+            <i>
+              <FaGithub />
+            </i>
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/landon-kimber-313364303"
+            className="contact-socials-btn"
+            id="linkedin"
+          >
+            <i>
+              <FaLinkedin />
+            </i>
+            LinkedIn
+          </a>
+          <a
+            href="https://www.facebook.com/landonkimber"
+            className="contact-socials-btn"
+            id="facebook"
+          >
+            <i>
+              <FaFacebook />
+            </i>
+            Facebook
+          </a>
+          <a
+            href="https://www.instagram.com/landon.kimber"
+            className="contact-socials-btn"
+            id="instagram"
+          >
+            <i>
+              <FaInstagram />
+            </i>
+            Instagram
+          </a>
+        </div>
       </body>
     </main>
   );

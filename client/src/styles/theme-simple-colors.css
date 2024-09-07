@@ -1,0 +1,156 @@
+[data-color="dark"] {
+  /* DARK COLORS FOR BG */
+  --primary-bg-color: #1c1b2b;
+  --secondary-bg-color: #0f185a;
+
+  /* LIGHT COLORS FOR TEXT */
+  --primary-text-color: #eceae7;
+  --secondary-text-color: #1bc8b6;
+
+  --accent-color: #1bc8b6;
+  /* #2be4aa; */
+  --white: #dcdde2;
+}
+
+[data-color="light"] {
+  /* LIGHT COLORS FOR BG */
+  --primary-bg-color: #f5f7f8;
+  --secondary-bg-color: #ffc55a;
+
+  /* DARK COLORS FOR TEXT */
+  --primary-text-color: #00215e;
+  --secondary-text-color: #2c4e80;
+
+  --accent-color: #fc4100;
+  --white: #f3f4f5;
+}
+
+[data-color="colorful"] {
+  --primary-bg-color: #d04848;
+  --secondary-bg-color: #6895d2;
+
+  --primary-text-color: #f2efea;
+  --secondary-text-color: #fde767;
+
+  --accent-color: #f3b95f;
+  --white: #ebeff2;
+}
+/* January */
+[data-color="january"] {
+  --primary-bg-color: #f0f8ff;
+  --secondary-bg-color: #9bd3e9;
+  --primary-text-color: #191970;
+  --secondary-text-color: #3f8ecf;
+  --accent-color: #d93030e6;
+  --white: #ffffff;
+}
+
+/* February */
+[data-color="february"] {
+  --primary-bg-color: #fbf8f9;
+  --secondary-bg-color: #ffc6d9;
+  --primary-text-color: #e34192;
+  --secondary-text-color: #e34192;
+  --accent-color: #2947f1;
+  --white: #ffffff;
+}
+
+/* March */
+[data-color="march"] {
+  --primary-bg-color: #7ea67e;
+  --secondary-bg-color: #2e962e;
+  --primary-text-color: #282928;
+  --secondary-text-color: #315331;
+  --accent-color: #eebb02;
+  --white: #f2f1ee;
+}
+
+/* April */
+[data-color="april"] {
+  --primary-bg-color: #f0ffff;
+  --secondary-bg-color: #e0ffff;
+  --primary-text-color: #332d46;
+  --secondary-text-color: #5964b5;
+  --accent-color: #ff69b4;
+  --white: #ffffff;
+}
+
+/* May */
+[data-color="may"] {
+  --primary-bg-color: #fafaf7;
+  --secondary-bg-color: #ffdef2;
+  --primary-text-color: #27283b;
+  --secondary-text-color: #ee185c;
+  --accent-color: #51e806;
+  --white: #ffffff;
+}
+
+/* June */
+[data-color="june"] {
+  --primary-bg-color: #f0f8ff;
+  --secondary-bg-color: #87cefa;
+  --primary-text-color: #00008b;
+  --secondary-text-color: #1e90ff;
+  --accent-color: #ff6347;
+  --white: #f0f8ff;
+}
+
+/* July */
+[data-color="july"] {
+  --primary-bg-color: #f8f8fb;
+  --secondary-bg-color: #dc143c;
+  --primary-text-color: #00008b;
+  --secondary-text-color: #b22222;
+  --accent-color: #0000ff;
+  --white: #ffffff;
+}
+
+/* August */
+[data-color="august"] {
+  --primary-bg-color: #fefdfb;
+  --secondary-bg-color: #f3e073;
+  --primary-text-color: #581212;
+  --secondary-text-color: #ff6600;
+  --accent-color: #e8430c;
+  --white: #ffffff;
+}
+
+/* September */
+[data-color="september"] {
+  --primary-bg-color: #f9f9f9;
+  --secondary-bg-color: #df7b0a;
+  --primary-text-color: #2d2848;
+  --secondary-text-color: #dcaa11;
+  --accent-color: #c50000;
+  --white: #ffffff;
+}
+
+/* October */
+[data-color="october"] {
+  --primary-bg-color: #3f6556;
+  --secondary-bg-color: #324034;
+  --primary-text-color: #f0f0f0;
+  --secondary-text-color: #d45800;
+  --accent-color: #ff4500;
+  --white: #ffffff;
+}
+
+/* November */
+[data-color="november"] {
+  --primary-bg-color: #f0b683;
+  --secondary-bg-color: #d2691e;
+  --primary-text-color: #5c4434;
+  --secondary-text-color: #628522;
+  --accent-color: #b8860b;
+  --white: #f3ede7;
+}
+
+/* December */
+[data-color="december"] {
+  --primary-bg-color: #f7fafb;
+  --secondary-bg-color: #d2e6eb;
+  --primary-text-color: #006400;
+  --secondary-text-color: #ff0000;
+  --accent-color: #c50000;
+  --white: #f7fafb;
+}

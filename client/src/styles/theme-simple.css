@@ -1,39 +1,4 @@
-[data-color="dark"] {
-  /* DARK COLORS FOR BG */
-  --primary-bg-color: #180161;
-  --secondary-bg-color: #4040c8;
-
-  /* LIGHT COLORS FOR TEXT */
-  --primary-text-color: #eceae7;
-  --secondary-text-color: #72de6a;
-
-  --accent-color: #2be4aa;
-  --white: #dcdde2;
-}
-
-[data-color="light"] {
-  /* LIGHT COLORS FOR BG */
-  --primary-bg-color: #f5f7f8;
-  --secondary-bg-color: #ffc55a;
-
-  /* DARK COLORS FOR TEXT */
-  --primary-text-color: #00215e;
-  --secondary-text-color: #2c4e80;
-
-  --accent-color: #fc4100;
-  --white: #f3f4f5;
-}
-
-[data-color="colorful"] {
-  --primary-bg-color: #d04848;
-  --secondary-bg-color: #6895d2;
-
-  --primary-text-color: #f2efea;
-  --secondary-text-color: #fde767;
-
-  --accent-color: #f3b95f;
-  --white: #ebeff2;
-}
+@import url(theme-simple-colors.css);
 
 /* GENERAL STYLING */
 p,
@@ -96,8 +61,6 @@ h1 {
     color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color))
   );
 
-  box-shadow: 0 0 4px
-    color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
   color: var(--primary-text-color);
 }
 
@@ -112,6 +75,58 @@ input {
   color: var(--primary-bg-color);
 }
 
+.contact-socials-btn {
+  font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+#github {
+  background-color: #171515;
+}
+#github:hover {
+  border: solid 2px #171515;
+  background-color: var(--white);
+  color: #171515;
+}
+
+#linkedin {
+  background-color: #0077b5;
+}
+#linkedin:hover {
+  border: solid 2px #0077b5;
+  background-color: var(--white);
+  color: #0077b5;
+}
+
+#facebook {
+  background-color: #3b5998;
+}
+#facebook:hover {
+  border: solid 2px #3b5998;
+  background-color: var(--white);
+  color: #3b5998;
+}
+
+#instagram {
+  background: linear-gradient(
+    to right,
+    #405de6,
+    #5851db,
+    #833ab4,
+    #c23685,
+    #e1306c,
+    #fd1d1d
+  );
+  background-size: 120% 120%;
+  background-position: center;
+}
+#instagram:hover {
+  border: solid 2px #e1306c;
+  background: var(--white);
+  background-color: var(--white);
+  color: #e1306c;
+}
 /* SETTINGS PAGE */
 /* ----------------------------------------------------------- */
 
@@ -122,9 +137,6 @@ input {
     color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color)),
     var(--secondary-bg-color)
   );
-
-  box-shadow: 0 0 4px
-    color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
 }
 .settings-checklist-items {
   color: var(--primary-text-color);
@@ -137,5 +149,5 @@ input {
 }
 
 .signature p {
-  color: var(--primary-text-color);
+  color: var(--primary-bg-color);
 }

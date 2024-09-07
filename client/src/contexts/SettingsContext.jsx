@@ -20,6 +20,13 @@ export const SettingsProvider = ({ children }) => {
     color: defaultColor,
   });
 
+  // if (settings.color == "Seasonal") {
+  //   if (dayjs().month() == 9) {
+  //     settings.color = "september";
+  //   } else if (dayjs().month() == 0) {
+  //     settings.color = "Dark"
+  // }
+
   return (
     <SettingsContext.Provider value={{ settings, setSettings }}>
       {children}

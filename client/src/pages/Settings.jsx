@@ -1,32 +1,49 @@
 import React from "react";
 import { useSettings } from "../contexts/SettingsContext";
 import { FaRegCircle, FaCheckCircle } from "react-icons/fa";
+import dayjs from "dayjs";
 
 const Settings = () => {
   const { settings, setSettings } = useSettings();
+  const currentMonth = dayjs().format("MMMM").toLowerCase();
 
   const handleSettingChange = (category, value) => {
+    if (category === "color" && value === "Seasonal") {
+      value = currentMonth;
+    }
+
     setSettings((prevSettings) => ({
       ...prevSettings,
       [category]: value,
     }));
   };
 
-  const ChecklistOption = ({ category, value, currentValue }) => (
-    <div
-      className="settings-checklist-option"
-      onClick={() => handleSettingChange(category, value)}
-    >
-      <span className="settings-checkbox">
-        {currentValue === value ? (
-          <FaCheckCircle size={20} />
-        ) : (
-          <FaRegCircle size={20} />
-        )}
-      </span>
-      <p>{value}</p>
-    </div>
-  );
+  const ChecklistOption = ({ category, value, currentValue }) => {
+    const isChecked = () => {
+      if (
+        currentValue === value ||
+        (currentValue === currentMonth && value === "Seasonal")
+      ) {
+        return true;
+      }
+    };
+
+    return (
+      <div
+        className="settings-checklist-option"
+        onClick={() => handleSettingChange(category, value)}
+      >
+        <span className="settings-checkbox">
+          {isChecked() ? (
+            <FaCheckCircle size={20} />
+          ) : (
+            <FaRegCircle size={20} />
+          )}
+        </span>
+        <p>{value}</p>
+      </div>
+    );
+  };
 
   return (
     <main className="page-content" data-color={settings.color.toLowerCase()}>
@@ -90,7 +107,7 @@ const Settings = () => {
           <div className="settings-theme-menu">
             <h2>Color</h2>
             <div className="settings-theme-list">
-              {["Light", "Dark", "Colorful"].map((color) => (
+              {["Light", "Dark", "Seasonal"].map((color) => (
                 <ChecklistOption
                   key={color}
                   category="color"
