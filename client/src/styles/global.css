@@ -33,9 +33,17 @@
 }
 .content-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   height: 100%;
+}
+
+.content-container-row {
+  flex-direction: row;
+}
+
+.content-container-column {
+  flex-direction: column;
+  align-items: center;
 }
 
 /* NAVBAR */
@@ -83,6 +91,66 @@
 /* ------------------------------------------ */
 /* PROJECTS PAGE */
 /* ------------------------------------------ */
+
+.slideshow-container {
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+.slideshow-container h2 {
+  margin-top: 2vh;
+  font-size: 4vh;
+  margin-bottom: 2vh;
+}
+.slideshow-container p {
+  align-self: start;
+  text-align: left;
+  margin: 2vh 7vw;
+  font-size: 2vh;
+}
+
+.slideshow-text {
+  border-radius: 20px;
+  height: 75%;
+  display: flex;
+  min-width: 15vw;
+  flex-direction: column;
+}
+
+.slideshow-image img {
+  border-radius: 15px;
+  width: 40vw;
+}
+
+.slideshow-controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 13%;
+  border-radius: 0 0 20px 20px;
+}
+.slideshow-count {
+  user-select: none;
+  margin-right: 3vw;
+  margin-left: 3vw;
+}
+
+.slideshow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 130%;
+  border-radius: 5px;
+  height: 8vh;
+  width: 15vh;
+}
+
 /* CONTACT PAGE */
 /* ------------------------------------------ */
 

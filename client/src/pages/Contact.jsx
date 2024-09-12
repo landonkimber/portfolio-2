@@ -43,9 +43,9 @@ const Contact = () => {
   return (
     <main className="page-content">
       <header className="basic-header" data-page-width={settings.contentWidth}>
-        <h1>Contact Me</h1>
+        <h1>Contact</h1>
       </header>
-      <body
+      <div
         className="content-container"
         data-page-width={settings.contentWidth}
       >
@@ -118,7 +118,7 @@ const Contact = () => {
             Instagram
           </a>
         </div>
-      </body>
+      </div>
     </main>
   );
 };

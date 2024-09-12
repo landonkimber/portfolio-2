@@ -50,7 +50,7 @@ const Settings = () => {
       <header className="basic-header" data-page-width={settings.contentWidth}>
         <h1>Settings</h1>
       </header>
-      <body
+      <div
         className="content-container"
         data-page-width={settings.contentWidth}
       >
@@ -94,7 +94,7 @@ const Settings = () => {
           <div className="settings-theme-menu">
             <h2>Theme</h2>
             <div className="settings-theme-list">
-              {["Simple", "River"].map((theme) => (
+              {["Simple"].map((theme) => (
                 <ChecklistOption
                   key={theme}
                   category="theme"
@@ -118,7 +118,7 @@ const Settings = () => {
             </div>
           </div>
         </div>
-      </body>
+      </div>
     </main>
   );
 };

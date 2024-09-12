@@ -51,6 +51,36 @@ h1 {
 /* PROJECTS PAGE */
 /* ----------------------------------------------------------- */
 
+.slideshow-container {
+  background: linear-gradient(
+    to bottom right,
+    var(--secondary-bg-color),
+    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color))
+  );
+  color: var(--primary-text-color);
+}
+
+.slideshow-controls {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+  border: solid 2px transparent;
+}
+
+.slideshow-btn {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+  border: solid 2px transparent;
+}
+
+.slideshow-btn:hover,
+.slideshow-btn:active {
+  cursor: pointer;
+  background-color: var(--white);
+  color: var(--accent-color);
+  font-size: 200%;
+  transition: 0.1s ease-in-out;
+}
+
 /* CONTACT ME PAGE */
 /* ----------------------------------------------------------- */
 
