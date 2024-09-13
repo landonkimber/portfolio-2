@@ -37,6 +37,7 @@
   width: 80%;
 }
 .content-container {
+  z-index: 1;
   display: flex;
   justify-content: center;
   height: 100%;
@@ -105,10 +106,10 @@
 
 #welcome {
   padding: 1vw;
-  border: 2px solid red;
   min-width: 20vw;
   margin-bottom: -1.2vh;
   font-size: 18vh;
+  z-index: 1;
 }
 
 #sub-welcome {
@@ -118,6 +119,7 @@
   margin-right: 31vw;
   text-align: right;
   font-size: 2vh;
+  z-index: 1;
 }
 
 .click-here {
@@ -128,7 +130,6 @@
   padding: 1vh 2vh;
   transform: skew(-5deg);
 }
-
 /* ------------------------------------------ */
 .about-content {
   display: block;

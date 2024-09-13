@@ -80,6 +80,7 @@ const Settings = () => {
           </div>
           <h3>Navigation Bar</h3>
           <div className="settings-checklist-items">
+            {/* NEEEED TO ADD A CENTER BUTTON FOR DEFAULT MOBILE USE. IN CENTER MODE, THE SCREEN WILL SWIPE LEFT/RIGHT RATHER THAN UP/DOWN */}
             {["Left-Handed", "Right-Handed"].map((nav) => (
               <ChecklistOption
                 key={nav}
