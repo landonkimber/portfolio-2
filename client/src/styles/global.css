@@ -1,5 +1,10 @@
 /* Font Vars */
 /* ------------------------------------------ */
+.ubuntu {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
 
 /* GENERAL STYLING */
 /* ------------------------------------------ */
@@ -85,10 +90,94 @@
 }
 
 /* ------------------------------------------ */
+
 /* WELCOME PAGE */
+.welcome-container {
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+#welcome {
+  padding: 1vw;
+  border: 2px solid red;
+  min-width: 20vw;
+  margin-bottom: -1.2vh;
+  font-size: 18vh;
+}
+
+#sub-welcome {
+  margin-right: 1vw;
+  margin-left: 1vw;
+  align-self: end;
+  margin-right: 31vw;
+  text-align: right;
+  font-size: 2vh;
+}
+
+.click-here {
+  margin-top: 5vh;
+  font-size: 3vh;
+  border: 3px solid transparent;
+  border-radius: 2px;
+  padding: 1vh 2vh;
+  transform: skew(-5deg);
+}
+
 /* ------------------------------------------ */
-/* ABOUT PAGE */
-/* ------------------------------------------ */
+.about-content {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.about-content > * {
+  box-sizing: border-box;
+}
+
+.about-content h2 {
+  text-align: left;
+  margin-left: 5vw;
+  width: 100%;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+#skiing-image {
+  float: right;
+  width: 25%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 0 1rem 1rem;
+  shape-outside: margin-box;
+}
+
+#rome-image {
+  float: left;
+  width: 25%;
+  max-width: 250px;
+  height: auto;
+  margin: 0 1rem 1rem 0;
+  shape-outside: margin-box;
+}
+
 /* PROJECTS PAGE */
 /* ------------------------------------------ */
 

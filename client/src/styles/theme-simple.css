@@ -45,6 +45,16 @@ h1 {
 /* WELCOME PAGE */
 /* ----------------------------------------------------------- */
 
+.click-here:hover {
+  cursor: pointer;
+  border: 3px solid var(--primary-text-color);
+  color: var(--primary-text-color);
+  background: var(--accent-color);
+}
+
+#sub-welcome {
+  background-color: var(--primary-bg-color);
+}
 /* ABOUT PAGE */
 /* ----------------------------------------------------------- */
 

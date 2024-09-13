@@ -127,11 +127,11 @@
 
 /* October */
 [data-color="october"] {
-  --primary-bg-color: #3f6556;
-  --secondary-bg-color: #324034;
-  --primary-text-color: #f0f0f0;
-  --secondary-text-color: #d45800;
-  --accent-color: #ff4500;
+  --primary-bg-color: #000000;
+  --secondary-bg-color: #1d6142;
+  --primary-text-color: #eceeec;
+  --secondary-text-color: #d5980a;
+  --accent-color: #a111ce;
   --white: #ffffff;
 }
 
