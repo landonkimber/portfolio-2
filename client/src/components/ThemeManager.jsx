@@ -8,44 +8,38 @@ const ThemeManager = () => {
   useEffect(() => {
     // MANIFEST CODE
     const fetchManifest = async () => {
-      try {
-        const response = await fetch("/manifest.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
+      const possiblePaths = [
+        "/manifest.json",
+        "/.vite/manifest.json",
+        "/assets/manifest.json",
+        "/client/dist/.vite/manifest.json",
+      ];
+
+      for (const path of possiblePaths) {
+        try {
+          console.log(`Attempting to fetch manifest from: ${path}`);
+          const response = await fetch(path);
+          if (response.ok) {
+            const data = await response.json();
+            console.log("Manifest successfully loaded from:", path);
+            console.log("Manifest data:", data);
+            return; // Exit the function if successful
+          }
+        } catch (error) {
+          console.error(`Error fetching manifest from ${path}:`, error);
         }
-        const data = await response.json();
-        setManifest(data);
-        console.log("Manifest:", data);
-      } catch (error) {
-        console.error("Could not load manifest:", error);
       }
+
+      console.error("Could not load manifest from any of the attempted paths");
     };
 
     fetchManifest();
-
-    const fetchManifest2 = async () => {
-      try {
-        const response = await fetch("/.vite/manifest.json");
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        setManifest(data);
-        console.log("Manifest:", data);
-      } catch (error) {
-        console.error("Could not load manifest:", error);
-      }
-    };
-
-    fetchManifest2();
 
     // OLD CODE
     const oldLink = document.getElementById("theme-css");
     if (oldLink) {
       oldLink.remove();
     }
-    const manifest = import.meta.env.VITE_MANIFEST;
-    console.log(`Manifest : ${manifest}`);
 
     const link =
       document.getElementById("theme-css") || document.createElement("link");
@@ -55,7 +49,8 @@ const ThemeManager = () => {
     // Construct the path to the theme CSS file
 
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
-    const themePath = `/src/styles/${themeFileName}`;
+    // const themePath = `/src/styles/${themeFileName}`;
+    const themePath = `/assets/${themeFileName}`;
 
     // Update the href of the link
     link.href = themePath;
