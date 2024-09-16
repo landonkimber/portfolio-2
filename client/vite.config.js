@@ -12,6 +12,8 @@ export default defineConfig({
         'theme-newspaper': './src/styles/theme-newspaper.css',
       },
     },
+    outDir: 'dist',
+    assetsDir: 'assets',
   },
   server: {
     fs: {
