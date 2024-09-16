@@ -5,6 +5,11 @@ const ThemeManager = () => {
   const { settings } = useSettings();
 
   useEffect(() => {
+    const oldLink = document.getElementById("theme-css");
+    if (oldLink) {
+      oldLink.remove();
+    }
+
     const link =
       document.getElementById("theme-css") || document.createElement("link");
     link.rel = "stylesheet";
