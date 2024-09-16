@@ -11,23 +11,23 @@ const ThemeManager = () => {
   }, []);
 
   useEffect(() => {
-    console.log("manifest", JSON.stringify(manifest));
     if (!manifest) return;
+
+    console.log("Manifest:", manifest);
 
     const link =
       document.getElementById("theme-css") || document.createElement("link");
     link.rel = "stylesheet";
     link.id = "theme-css";
 
-    const themeFileName = `src/styles/theme-${settings.theme.toLowerCase()}.css`;
-    console.log(manifest.themeFileName);
-    const themeEntry = manifest[themeFileName];
-
-    console.log("themeFileName", themeFileName);
-    console.log("themeEntry", themeEntry);
+    const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
+    const themeEntry = Object.entries(manifest).find(([key]) =>
+      key.endsWith(themeFileName)
+    );
 
     if (themeEntry) {
-      link.href = themeEntry.file;
+      const [, assetInfo] = themeEntry;
+      link.href = assetInfo.file;
       if (!document.getElementById("theme-css")) {
         document.head.appendChild(link);
       }

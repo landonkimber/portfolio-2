@@ -11,5 +11,10 @@ export default defineConfig({
         'theme-simple': './src/styles/theme-simple.css',
       },
     },
+    server: {
+      fs: {
+        allow: ['.'],
+      },
+    },
   },
 })
