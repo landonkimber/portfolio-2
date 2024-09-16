@@ -95,7 +95,7 @@ const Settings = () => {
           <div className="settings-theme-menu">
             <h2>Theme</h2>
             <div className="settings-theme-list">
-              {["Simple"].map((theme) => (
+              {["Simple", "Newspaper"].map((theme) => (
                 <ChecklistOption
                   key={theme}
                   category="theme"
