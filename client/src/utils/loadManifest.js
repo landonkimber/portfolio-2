@@ -5,11 +5,14 @@ export async function loadManifest() {
         '/.vite/manifest.json'
     ];
 
+
     for (const path of manifestPaths) {
         try {
             const response = await fetch(path);
             if (response.ok) {
-                return response.json();
+                console.log(`fetched manifest from ${path}`);
+                console.log(response);
+                return response;
             }
         } catch (error) {
             console.warn(`Failed to load manifest from ${path}`);

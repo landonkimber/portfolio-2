@@ -1,21 +1,42 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSettings } from "../contexts/SettingsContext";
-
+import { loadManifest } from "../utils/loadManifest";
 const ThemeManager = () => {
   const { settings } = useSettings();
 
+  const [manifest, setManifest] = useState(null);
+
   useEffect(() => {
-    const themeLink = document.getElementById("theme-css");
-    if (themeLink) {
-      themeLink.href = `/src/styles/${settings.theme.toLowerCase()}/theme-${settings.theme.toLowerCase()}.css`;
+    loadManifest().then(setManifest).catch(console.error);
+  }, []);
+  useEffect(() => {
+    console.log("Loading manifest...");
+    console.log(`Settings: ${settings}`);
+    console.log(`Settings.theme: ${settings.theme.toLowerCase()}`);
+    console.log(`Manifest: ${JSON.stringify(manifest)}`);
+
+    if (!manifest) return;
+
+    const link =
+      document.getElementById("theme-css") || document.createElement("link");
+    link.rel = "stylesheet";
+    link.id = "theme-css";
+
+    const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
+
+    const themeEntry = Object.entries(manifest).find(([key]) =>
+      key.endsWith(themeFileName)
+    );
+    if (themeEntry) {
+      const [, assetInfo] = themeEntry;
+      link.href = assetInfo.file;
+      if (!document.getElementById("theme-css")) {
+        document.head.appendChild(link);
+      }
     } else {
-      const link = document.createElement("link");
-      link.rel = "stylesheet";
-      link.id = "theme-css";
-      link.href = `/src/styles/${settings.theme.toLowerCase()}/theme-${settings.theme.toLowerCase()}.css`;
-      document.head.appendChild(link);
+      console.error(`Theme file ${themeFileName} not found in manifest`);
     }
-  }, [settings.theme]);
+  }, [settings, manifest]);
 
   return null;
 };

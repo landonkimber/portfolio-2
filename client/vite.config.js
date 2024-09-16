@@ -8,6 +8,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        'theme-simple': './src/styles/simple/theme-simple.css',
+        'theme-newspaper': './src/styles/newspaper/theme-newspaper.css',
       },
       output: {
         assetFileNames: (assetInfo) => {
