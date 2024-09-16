@@ -3,38 +3,8 @@ import { useSettings } from "../contexts/SettingsContext";
 
 const ThemeManager = () => {
   const { settings } = useSettings();
-  const [manifest, setManifest] = useState(null);
 
   useEffect(() => {
-    // MANIFEST CODE
-    const fetchManifest = async () => {
-      const possiblePaths = [
-        "/manifest.json",
-        "/.vite/manifest.json",
-        "/assets/manifest.json",
-        "/client/dist/.vite/manifest.json",
-      ];
-
-      for (const path of possiblePaths) {
-        try {
-          console.log(`Attempting to fetch manifest from: ${path}`);
-          const response = await fetch(path);
-          if (response.ok) {
-            const data = await response.json();
-            console.log("Manifest successfully loaded from:", path);
-            console.log("Manifest data:", data);
-            return; // Exit the function if successful
-          }
-        } catch (error) {
-          console.error(`Error fetching manifest from ${path}:`, error);
-        }
-      }
-
-      console.error("Could not load manifest from any of the attempted paths");
-    };
-
-    fetchManifest();
-
     // OLD CODE
     const oldLink = document.getElementById("theme-css");
     if (oldLink) {
