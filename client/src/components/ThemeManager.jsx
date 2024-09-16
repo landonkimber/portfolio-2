@@ -6,9 +6,8 @@ const ThemeManager = () => {
 
   useEffect(() => {
     const link = document.createElement("link");
-    link.href = `/src/styles/theme-${settings.theme.toLowerCase()}.css`;
     link.rel = "stylesheet";
-    link.id = "theme-css";
+    link.href = `/src/styles/theme-${settings.theme.toLowerCase()}.css`;
     document.head.appendChild(link);
     console.log(link);
   }, [settings.theme]);
