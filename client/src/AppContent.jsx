@@ -11,7 +11,6 @@ import NavBarDefault from "./components/NavBars/NavBarDefault.jsx";
 import Signature from "./components/Signature.jsx";
 
 import "./App.css";
-import "./styles/global.css";
 
 function App() {
   const { settings } = useSettings();

@@ -1,20 +1,27 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 
 export default defineConfig({
   plugins: [react()],
   build: {
-    manifest: true,
     rollupOptions: {
       input: {
-        main: './index.html',
-        'theme-simple': './src/styles/theme-simple.css',
+        main: resolve(__dirname, 'index.html'),
+      },
+      output: {
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name.endsWith('.css')) {
+            return 'assets/[name][extname]';
+          }
+          return 'assets/[hash][extname]';
+        },
       },
     },
-    server: {
-      fs: {
-        allow: ['.'],
-      },
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
     },
   },
 })
