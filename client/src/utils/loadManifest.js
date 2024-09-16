@@ -1,3 +1,4 @@
+
 export async function loadManifest() {
     const manifestPaths = [
         '/manifest.json',

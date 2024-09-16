@@ -20,10 +20,14 @@ export default defineConfig({
         },
       },
     },
+    main: './index.html',
+    'theme-simple': './src/styles/theme-simple.css',
+  },
+},
   },
   resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'),
-    },
+  alias: {
+    '@': resolve(__dirname, 'src'),
   },
+},
 })

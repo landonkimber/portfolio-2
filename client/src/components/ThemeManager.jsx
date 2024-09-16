@@ -28,8 +28,7 @@ const ThemeManager = () => {
       key.endsWith(themeFileName)
     );
     if (themeEntry) {
-      const [, assetInfo] = themeEntry;
-      link.href = assetInfo.file;
+      link.href = themeEntry.file;
       if (!document.getElementById("theme-css")) {
         document.head.appendChild(link);
       }
