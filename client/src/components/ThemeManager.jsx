@@ -9,6 +9,8 @@ const ThemeManager = () => {
     if (oldLink) {
       oldLink.remove();
     }
+    const manifest = import.meta.env.VITE_MANIFEST;
+    console.log(`Manifest: ${manifest}`);
 
     const link =
       document.getElementById("theme-css") || document.createElement("link");
@@ -16,6 +18,7 @@ const ThemeManager = () => {
     link.id = "theme-css";
 
     // Construct the path to the theme CSS file
+
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
     const themePath = `/src/styles/${themeFileName}`;
 
