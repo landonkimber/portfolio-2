@@ -12,10 +12,10 @@ export default defineConfig({
         'theme-newspaper': './src/styles/theme-newspaper.css',
       },
     },
-    server: {
-      fs: {
-        allow: ['.'],
-      },
+  },
+  server: {
+    fs: {
+      allow: ['.'],
     },
   },
 })

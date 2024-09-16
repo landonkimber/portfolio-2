@@ -25,7 +25,7 @@ const ThemeManager = () => {
 
     const fetchManifest2 = async () => {
       try {
-        const response = await fetch("/dist/vite./manifest.json");
+        const response = await fetch("/.vite/manifest.json");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
