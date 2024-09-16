@@ -1,5 +1,5 @@
-@import url(theme-simple-global.css);
-@import url(theme-simple-colors.css);
+@import url(./simple/theme-simple-global.css);
+@import url(./simple/theme-simple-colors.css);
 
 :root {
   --red: #ff0000;

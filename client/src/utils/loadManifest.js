@@ -1,4 +1,3 @@
-
 export async function loadManifest() {
     const manifestPaths = [
         '/manifest.json',
@@ -6,18 +5,16 @@ export async function loadManifest() {
         '/.vite/manifest.json'
     ];
 
-
     for (const path of manifestPaths) {
         try {
             const response = await fetch(path);
             if (response.ok) {
-                console.log(`fetched manifest from ${path}`);
-                console.log(response);
-                return response;
+                return path;
             }
         } catch (error) {
             console.warn(`Failed to load manifest from ${path}`);
         }
     }
-    return response.json();
+
+    throw new Error('Failed to load asset manifest from any known location');
 }
