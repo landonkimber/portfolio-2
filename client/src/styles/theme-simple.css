@@ -49,24 +49,31 @@ h1 {
 /* WELCOME PAGE */
 /* ----------------------------------------------------------- */
 
-.click-here:hover {
-  cursor: pointer;
-  border: 3px solid var(--primary-text-color);
-  color: var(--primary-text-color);
-  background: var(--accent-color);
-}
-
-#welcome {
+.welcome {
   color: var(--accent-color);
   border: 2px solid var(--red);
 }
 
-#sub-welcome {
+.sub-welcome {
   background-color: var(--primary-bg-color);
 }
 
-.test1 {
-  background-color: rgb(from var(--primary-text-color) r g b / 0.03);
+.click-here {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+}
+
+.click-here:hover {
+  background-color: var(--secondary-bg-color);
+  color: var(--primary-text-color);
+}
+
+.click-hint {
+  color: var(--accent-color);
+}
+.invisible {
+  color: transparent;
+  display: none;
 }
 
 /* ABOUT PAGE */

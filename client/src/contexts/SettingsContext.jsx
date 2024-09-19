@@ -11,11 +11,22 @@ export const SettingsProvider = ({ children }) => {
     defaultColor = "Light";
   }
 
+  var screenWidth = window.innerWidth;
+  var screenHeight = window.innerHeight;
+  var isVertical = screenHeight > screenWidth;
+
+  var defaultWidth = "Standard";
+  var defaultNavigation = "Right-Handed";
+  if (isVertical) {
+    defaultNavigation = "Bottom";
+    defaultWidth = "Wide";
+  }
+
   // Default settings
   const [settings, setSettings] = useState({
     fontSize: "Standard",
-    contentWidth: "Standard",
-    navigationBar: "Right-Handed",
+    contentWidth: defaultWidth,
+    navigationBar: defaultNavigation,
     theme: "Simple",
     color: defaultColor,
   });

@@ -19,8 +19,8 @@ const ThemeManager = () => {
     // Construct the path to the theme CSS file
 
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
-    // const themePath = `/src/styles/${themeFileName}`;
-    const themePath = `/assets/${themeFileName}`;
+    const themePath = `/src/styles/${themeFileName}`;
+    // const themePath = `/assets/${themeFileName}`;
 
     // Update the href of the link
     link.href = themePath;

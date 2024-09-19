@@ -7,6 +7,8 @@ import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import Settings from "./pages/Settings.jsx";
+
+import Bars from "./components/Bars.jsx";
 import NavBarDefault from "./components/NavBars/NavBarDefault.jsx";
 import Signature from "./components/Signature.jsx";
 
@@ -14,8 +16,6 @@ import "./App.css";
 
 function App() {
   const { settings } = useSettings();
-
-  console.log(`Current settings: ${JSON.stringify(settings)}`);
 
   const sectionRefs = {
     home: useRef(null),
@@ -51,14 +51,18 @@ function App() {
       observers.push(observer);
     });
 
-    // Cleanup function
     return () => {
       observers.forEach((observer) => observer.disconnect());
     };
   }, []);
 
   return (
-    <div className="App" data-color={settings.color.toLowerCase()}>
+    <div
+      className="App"
+      data-color={settings.color.toLowerCase()}
+      data-font-size={settings.fontSize.toLowerCase()}
+    >
+      <Bars />
       <NavBarDefault
         scrollToSection={scrollToSection}
         currentSection={currentSection}
