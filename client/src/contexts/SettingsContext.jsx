@@ -13,11 +13,12 @@ export const SettingsProvider = ({ children }) => {
 
   var screenWidth = window.innerWidth;
   var screenHeight = window.innerHeight;
+  console.log(screenWidth);
   var isVertical = screenHeight > screenWidth;
 
   var defaultWidth = "Standard";
   var defaultNavigation = "Right-Handed";
-  if (isVertical) {
+  if (isVertical && screenWidth < 600) {
     defaultNavigation = "Bottom";
     defaultWidth = "Wide";
   }
@@ -29,6 +30,8 @@ export const SettingsProvider = ({ children }) => {
     navigationBar: defaultNavigation,
     theme: "Simple",
     color: defaultColor,
+    screenHeight: screenHeight,
+    screenWidth: screenWidth,
   });
 
   // if (settings.color == "Seasonal") {

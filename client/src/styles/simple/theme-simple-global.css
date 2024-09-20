@@ -15,9 +15,22 @@
 
 [data-font-size="large"] {
   --text-p: 2rem;
-  --text-h1: 7.5rem;
+  --text-h1: 6.5rem;
   --text-h2: 4.5rem;
   --text-h3: 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  [data-font-size="small"] {
+    --text-p: 1.3rem;
+  }
+
+  [data-font-size="large"] {
+    --text-p: 1.8rem;
+    --text-h1: 5rem;
+    --text-h2: 3.5rem;
+    --text-h3: 2.5rem;
+  }
 }
 
 /* Fonts */
@@ -41,7 +54,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -215,7 +228,9 @@ p {
   display: flex;
   justify-content: center;
   padding: 0.5rem;
-  min-width: 22.5rem;
+  min-width: 23rem;
+  padding-top: calc(0.5 * var(--text-p));
+  padding-bottom: calc(0.5 * var(--text-p));
   width: 33%;
   z-index: 1;
   position: relative;
@@ -290,6 +305,7 @@ p {
 }
 
 /* ------------------------------------------ */
+
 .about-content-container {
   display: flex;
   flex-direction: column;
@@ -302,19 +318,19 @@ p {
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 10%;
+  height: 7%;
   width: 100%;
   z-index: 2;
 }
 
 .about-content {
-  height: 90%;
+  height: 80%;
   display: block;
 }
 
 .about-content p {
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.2;
   margin: 1%;
 }
 
@@ -341,8 +357,6 @@ p {
   .about-content-header {
     font-size: 130%;
   }
-  .about-content p {
-  }
 
   #skiing-image {
     width: 30%;
@@ -356,10 +370,6 @@ p {
 }
 
 @media screen and (max-width: 480px) {
-  .about-content-header {
-  }
-  .about-content p {
-  }
   #skiing-image {
     width: 35%;
     height: auto;
@@ -373,62 +383,53 @@ p {
 
 /* PROJECTS PAGE */
 /* ------------------------------------------ */
-
-.slideshow-container {
-  border-radius: 30px;
+.projects-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 80%;
-}
-
-.slideshow-container h2 {
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-}
-.slideshow-container p {
-  align-self: start;
-  text-align: left;
-  margin: 2vh 7vw;
-}
-
-.slideshow-text {
-  border-radius: 20px;
-  height: 75%;
-  display: flex;
-  min-width: 15vw;
-  flex-direction: column;
-}
-
-.slideshow-image img {
-  border-radius: 15px;
-  width: 40vw;
-}
-
-.slideshow-controls {
-  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 13%;
-  border-radius: 0 0 20px 20px;
-}
-.slideshow-count {
-  user-select: none;
-  margin-right: 3vw;
-  margin-left: 3vw;
+  height: 100%;
+  width: 90%;
 }
 
-.slideshow-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.project-card {
+  position: relative;
+  width: 35%;
+  height: fit-content;
+  border: red solid 1px;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.project-card-expand {
+  position: absolute;
   border: none;
-  border-radius: 5px;
-  height: 8vh;
-  width: 15vh;
+  background: none;
+  top: 0;
+  right: 0;
+  width: 10%;
+  font-size: var(--text-h3);
+  aspect-ratio: 1/1;
+  z-index: 2;
+}
+
+.project-card-view {
+  position: absolute;
+  border: none;
+  bottom: 0;
+  right: 0;
+  width: 45%;
+  height: 15%;
+  font-size: var(--text-p);
+  aspect-ratio: 1/1;
+  z-index: 2;
+}
+
+.project-card img {
+  margin-top: 8%;
+  width: 90%;
+  aspect-ratio: 16/9;
 }
 
 /* CONTACT PAGE */
