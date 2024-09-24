@@ -242,6 +242,7 @@ p {
   padding: calc(0.2 * var(--text-p));
   font-size: calc(0.6 * var(--text-p));
   right: 10%;
+  border-radius: 10px;
   position: absolute;
   text-align: center;
   z-index: 2;
