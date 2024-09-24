@@ -16,12 +16,3 @@
   justify-content: center;
   align-items: center;
 }
-
-/* You can add different background colors or styles for each section */
-.scroll-container section:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
-.scroll-container section:nth-child(even) {
-  background-color: #e0e0e0;
-}
