@@ -26,6 +26,28 @@ h1 {
   border-bottom: var(--secondary-text-color) 1px solid;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: calc(var(--accent-color) + 20%);
+}
+
 /* NAVBAR */
 /* ----------------------------------------------------------- */
 .navbar {
@@ -79,41 +101,47 @@ h1 {
 /* ABOUT PAGE */
 /* ----------------------------------------------------------- */
 
+.about-content {
+  backdrop-filter: blur(15px);
+  color: var(--primary-text-color);
+}
 .about-content-header h2 {
   color: var(--accent-color);
 }
 
 /* PROJECTS PAGE */
 /* ----------------------------------------------------------- */
-
-.slideshow-container {
-  background: linear-gradient(
-    to bottom right,
-    var(--secondary-bg-color),
-    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color))
-  );
+.project-card {
+  backdrop-filter: blur(10px);
+  background-color: color-mix(in srgb, var(--accent-color) 8%, transparent);
   color: var(--primary-text-color);
+  border: solid 2px color-mix(in srgb, var(--accent-color) 60%, transparent);
 }
 
-.slideshow-controls {
-  background-color: var(--accent-color);
-  color: var(--primary-bg-color);
-  border: solid 2px transparent;
+.project-card-expand {
+  color: var(--primary-text-color);
+  background-color: var(--secondary-bg-color);
+}
+.project-card-expand:hover,
+.project-card-expand:focus {
+  background-color: var(--primary-text-color);
+  color: var(--secondary-bg-color);
 }
 
-.slideshow-btn {
+.project-card-view {
   background-color: var(--secondary-bg-color);
   color: var(--primary-text-color);
-  border: solid 2px transparent;
+  border: solid 2px var(--primary-text-color);
 }
-
-.slideshow-btn:hover,
-.slideshow-btn:active {
-  cursor: pointer;
-  background-color: var(--white);
-  color: var(--accent-color);
-  font-size: 200%;
-  transition: 0.1s ease-in-out;
+.project-card-view:hover,
+.project-card-view:focus {
+  background-color: var(--primary-text-color);
+  color: var(--secondary-bg-color);
+  border: solid 2px var(--secondary-bg-color);
+}
+.project-card-title {
+  color: var(--primary-text-color);
+  border-bottom: solid 1px var(--primary-text-color);
 }
 
 /* CONTACT ME PAGE */

@@ -1,13 +1,13 @@
 /* Font-size Vars */
 [data-font-size="standard"] {
-  --text-p: 1.5rem;
+  --text-p: 1.3rem;
   --text-h1: 5rem;
   --text-h2: 3rem;
   --text-h3: 2rem;
 }
 
 [data-font-size="small"] {
-  --text-p: 1rem;
+  --text-p: 0.9rem;
   --text-h1: 3.3rem;
   --text-h2: 2rem;
   --text-h3: 1.3rem;
@@ -61,8 +61,9 @@
 .basic-header {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 15%;
+  align-items: end;
+  margin-bottom: calc(0.2 * var(--text-h1));
+  height: calc(1.4 * var(--text-h1));
 }
 
 .basic-header h1 {
@@ -80,7 +81,7 @@ h3 {
   font-size: var(--text-h3);
 }
 p {
-  font-size: 1.5rem;
+  font-size: var(--text-p);
 }
 
 [data-page-width="Standard"] {
@@ -319,19 +320,29 @@ p {
   justify-content: start;
   align-items: center;
   height: 7%;
-  width: 100%;
+  margin: calc(0.8 * var(--text-p));
+  width: 90%;
   z-index: 2;
 }
 
 .about-content {
-  height: 80%;
+  height: 100%;
+  width: 100%;
   display: block;
+  border-radius: 5px;
+  overflow: auto;
+}
+
+.about-content[data-navbar-side="Bottom"] {
+  height: 90%;
 }
 
 .about-content p {
   text-align: left;
   line-height: 1.2;
   margin: 1%;
+  /* overflow: hidden; */
+  /* text-overflow: "-"; */
 }
 
 #skiing-image {
@@ -353,8 +364,9 @@ p {
   height: auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .about-content-header {
+    width: 85%;
     font-size: 130%;
   }
 
@@ -370,6 +382,9 @@ p {
 }
 
 @media screen and (max-width: 480px) {
+  .about-content-header {
+    width: 86%;
+  }
   #skiing-image {
     width: 35%;
     height: auto;
@@ -380,58 +395,121 @@ p {
     height: auto;
   }
 }
-
 /* PROJECTS PAGE */
+/* ------------------------------------------ */ /* PROJECTS PAGE */
 /* ------------------------------------------ */
 .projects-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 100%;
-  width: 90%;
+  width: 100%;
+  height: 95%;
+}
+
+.projects-container[data-navbar-side="Bottom"] {
+  height: 85%;
+}
+
+.project-card-test {
+  min-width: 49%;
 }
 
 .project-card {
+  border: black solid 1px;
+  border-radius: 5px;
   position: relative;
-  width: 35%;
-  height: fit-content;
-  border: red solid 1px;
-  margin-bottom: 5%;
-  margin-left: 5%;
-  margin-right: 5%;
+  width: 45%;
+  height: 45%;
+  margin: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-card img {
+  margin-bottom: 1%;
+  width: auto;
+  max-height: 50%;
+  border-radius: 5px;
 }
 
 .project-card-expand {
   position: absolute;
   border: none;
+  left: 1%;
+  top: 1%;
+  width: calc(1.2 * var(--text-h3));
+  height: calc(1.2 * var(--text-h3));
   background: none;
-  top: 0;
-  right: 0;
-  width: 10%;
-  font-size: var(--text-h3);
-  aspect-ratio: 1/1;
+  border-radius: 50%;
+  font-size: calc(0.7 * var(--text-h3));
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 2;
 }
 
 .project-card-view {
   position: absolute;
   border: none;
-  bottom: 0;
-  right: 0;
-  width: 45%;
-  height: 15%;
-  font-size: var(--text-p);
-  aspect-ratio: 1/1;
+  border-radius: 2%;
+  bottom: 5%;
+  right: 3%;
+  width: 30%;
+  height: var(--text-h3);
+  font-size: calc(0.7 * var(--text-p));
+  font-family: ubuntu, Calibri;
   z-index: 2;
 }
 
-.project-card img {
-  margin-top: 8%;
+.project-card-title {
+  position: absolute;
+  top: 1%;
+  right: 5%;
   width: 90%;
-  aspect-ratio: 16/9;
+  text-align: right;
+  font-size: var(--text-h3);
 }
 
+@media screen and (orientation: portrait) {
+  .projects-container {
+    flex-direction: column;
+  }
+  .project-card {
+    min-width: 100%;
+    height: 22%;
+    margin: 0.5%;
+  }
+
+  .project-card img {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    width: auto;
+    max-height: 60%;
+    border-radius: 5px;
+  }
+  .project-card-view {
+    bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .project-card-title {
+    font-size: calc(0.7 * var(--text-h3));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+  .project-card-title {
+    font-size: calc(0.7 * var(--text-h3));
+  }
+}
 /* CONTACT PAGE */
 /* ------------------------------------------ */
 

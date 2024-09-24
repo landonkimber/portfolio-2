@@ -1,5 +1,5 @@
 // src/contexts/SettingsContext.jsx
-import React, { createContext, useState, useContext } from "react";
+import React, { createContext, useState, useContext, useCallback } from "react";
 import dayjs from "dayjs";
 
 const SettingsContext = createContext();
@@ -21,6 +21,8 @@ export const SettingsProvider = ({ children }) => {
   if (isVertical && screenWidth < 600) {
     defaultNavigation = "Bottom";
     defaultWidth = "Wide";
+  } else if (!isVertical && screenWidth < 1000) {
+    defaultWidth = "Wide";
   }
 
   // Default settings
@@ -34,6 +36,7 @@ export const SettingsProvider = ({ children }) => {
     screenWidth: screenWidth,
   });
 
+  console.log(settings);
   // if (settings.color == "Seasonal") {
   //   if (dayjs().month() == 9) {
   //     settings.color = "september";

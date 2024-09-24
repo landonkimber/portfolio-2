@@ -16,11 +16,14 @@ const About = () => {
         className="content-container"
         data-page-width={settings.contentWidth}
       >
-        <div className="about-content-container ">
-          <div className="about-content-header">
-            <h2>Hi, I'm Landon Kimber!</h2>
-          </div>
-          <div className="about-content">
+        <div className="about-content-container">
+          <div
+            className="about-content"
+            data-navbar-side={settings.navigationBar}
+          >
+            <div className="about-content-header">
+              <h2>Hi, I'm Landon Kimber!</h2>
+            </div>
             <img
               id="skiing-image"
               src="./aboutImages/skiing.jpg"

@@ -7,14 +7,26 @@ const projects = [
   {
     id: 1,
     title: "Affirm",
+    imgName: "affirm",
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
   },
-  { id: 2, title: "Cornerstone", description: "Description for Project 2" },
-  { id: 3, title: "Portfolio", description: "Description for Project 3" },
+  {
+    id: 2,
+    title: "Cornerstone",
+    imgName: "cornerstone",
+    description: "Description for Project 2",
+  },
+  {
+    id: 3,
+    title: "Portfolio",
+    imgName: "portfolio",
+    description: "Description for Project 3",
+  },
   {
     id: 4,
     title: "More coming soon!",
+    imgName: "coming-soon",
   },
 ];
 
@@ -23,7 +35,7 @@ const Projects = () => {
   return (
     <div className="page-content">
       <header className="basic-header" data-page-width={settings.contentWidth}>
-        <h1>Projects</h1>
+        <h1 className="ubuntu">Projects</h1>
       </header>
       <div
         className="content-container"
@@ -35,8 +47,13 @@ const Projects = () => {
               key={project.id}
               title={project.title}
               description={project.description}
+              imgName={project.imgName}
             />
           ))}
+          {/* <div className="project-card-test"></div>
+          <div className="project-card-test"></div>
+          <div className="project-card-test"></div>
+          <div className="project-card-test"></div> */}
         </div>
       </div>
     </div>

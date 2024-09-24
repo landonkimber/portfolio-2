@@ -18,6 +18,22 @@ const Settings = () => {
     }));
   };
 
+  var availableSettings = {
+    fontSize: ["Small", "Standard", "Large"],
+    contentWidth: ["Standard", "Wide"],
+    navigationBar: ["Left-Handed", "Right-Handed", "Bottom"],
+    theme: ["Simple", "Newspaper"],
+    color: ["Light", "Dark"],
+  };
+
+  if (settings.screenWidth < 480) {
+    availableSettings.navigationBar = ["Bottom"];
+    availableSettings.contentWidth = ["Wide"];
+  } else if (settings.screenWidth < 800) {
+    availableSettings.navigationBar = ["Bottom", "Right-Handed"];
+    availableSettings.contentWidth = ["Wide"];
+  }
+
   const ChecklistOption = ({ category, value, currentValue }) => {
     const isChecked = () => {
       if (
@@ -58,7 +74,7 @@ const Settings = () => {
           <h2>General</h2>
           <h3>Font Size</h3>
           <div className="settings-checklist-items">
-            {["Small", "Standard", "Large"].map((size) => (
+            {availableSettings.fontSize.map((size) => (
               <ChecklistOption
                 key={size}
                 category="fontSize"
@@ -69,7 +85,7 @@ const Settings = () => {
           </div>
           <h3>Content Width</h3>
           <div className="settings-checklist-items">
-            {["Standard", "Wide"].map((width) => (
+            {availableSettings.contentWidth.map((width) => (
               <ChecklistOption
                 key={width}
                 category="contentWidth"
@@ -81,7 +97,7 @@ const Settings = () => {
           <h3>Navigation Bar</h3>
           <div className="settings-checklist-items">
             {/* NEEEED TO ADD A CENTER BUTTON FOR DEFAULT MOBILE USE. IN CENTER MODE, THE SCREEN WILL SWIPE LEFT/RIGHT RATHER THAN UP/DOWN */}
-            {["Left-Handed", "Right-Handed", "Bottom"].map((nav) => (
+            {availableSettings.navigationBar.map((nav) => (
               <ChecklistOption
                 key={nav}
                 category="navigationBar"
@@ -95,7 +111,7 @@ const Settings = () => {
           <div className="settings-theme-menu">
             <h2>Theme</h2>
             <div className="settings-theme-list">
-              {["Simple", "Newspaper"].map((theme) => (
+              {availableSettings.theme.map((theme) => (
                 <ChecklistOption
                   key={theme}
                   category="theme"
@@ -108,7 +124,7 @@ const Settings = () => {
           <div className="settings-theme-menu">
             <h2>Color</h2>
             <div className="settings-theme-list">
-              {["Light", "Dark", "Seasonal"].map((color) => (
+              {availableSettings.color.map((color) => (
                 <ChecklistOption
                   key={color}
                   category="color"
