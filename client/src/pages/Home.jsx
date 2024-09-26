@@ -23,7 +23,7 @@ const Home = ({ scrollToSection }) => {
             className="click-here"
             onClick={() => scrollToSection("about")}
           >
-            <FaArrowCircleDown />
+            <FaArrowCircleDown aria-hidden="true" />
           </button>
         </div>
       </div>
