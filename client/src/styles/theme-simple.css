@@ -259,15 +259,77 @@ textarea {
 /* ----------------------------------------------------------- */
 
 .settings-theme-container {
+  backdrop-filter: blur(10px);
   color: var(--primary-text-color);
-  background: linear-gradient(
-    to bottom right,
-    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color)),
-    var(--secondary-bg-color)
-  );
 }
+
+.settings-theme-theme-menu-header,
+.settings-theme-color-menu-header {
+  background-color: var(--primary-bg-color);
+}
+.settings-theme-theme-menu h2,
+.settings-theme-color-menu h2 {
+  color: var(--accent-color);
+}
+
 .settings-checklist-items {
   color: var(--primary-text-color);
+}
+
+.checkbox-highlighted-true {
+  color: var(--accent-color);
+  border: var(--accent-color) 1px solid;
+}
+.checkbox-highlighted-false {
+  border: var(--primary-text-color) 2px transparent;
+}
+/* THEME/COLOR BACKGROUNDS!! */
+#theme-Simple {
+  background-image: url("../../public/themeImages/simple-light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fc4100;
+}
+
+#theme-Simple p {
+  color: #3b5998;
+}
+#color-Light {
+  background-color: #f5f7f8;
+  color: #fc4100;
+}
+#color-Light p {
+  color: rgb(0, 33, 94);
+}
+
+#color-Light {
+  background-color: #f5f7f8;
+  color: #fc4100;
+}
+#color-Light p {
+  color: rgb(0, 33, 94);
+}
+#color-Dark {
+  background-color: #1c1b2b;
+  color: #1bc8b6;
+}
+#color-Dark p {
+  color: rgb(236, 234, 231);
+}
+#color-Seasonal {
+  background-color: #d04848;
+  color: #0eae0e;
+}
+#color-Seasonal p {
+  color: #ffd454;
+}
+#color-Red {
+  background-color: #fbfbfb;
+  color: #ea0707;
+}
+#color-Red p {
+  color: #950a0a;
 }
 
 /* SIGNATURE */

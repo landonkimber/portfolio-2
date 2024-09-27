@@ -8,18 +8,18 @@
 }
 [data-color="light"] {
   --primary-bg-color: #f5f7f8;
-  --secondary-bg-color: #ffc55a;
+  --secondary-bg-color: #eccd1d;
   --primary-text-color: rgb(0, 33, 94);
   --secondary-text-color: #2c4e80;
   --accent-color: #fc4100;
   --white: #f3f4f5;
 }
-[data-color="colorful"] {
-  --primary-bg-color: #d04848;
-  --secondary-bg-color: #6895d2;
-  --primary-text-color: rgb(242, 239, 234);
-  --secondary-text-color: #fde767;
-  --accent-color: #f3b95f;
+[data-color="red"] {
+  --primary-bg-color: #fbfbfb;
+  --secondary-bg-color: #c6c6c6;
+  --primary-text-color: rgb(28, 1, 1);
+  --secondary-text-color: #950a0a;
+  --accent-color: #ea0707;
   --white: #ebeff2;
 }
 /* January */

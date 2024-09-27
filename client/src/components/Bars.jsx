@@ -1,6 +1,9 @@
 import React from "react";
+import { useSettings } from "../contexts/SettingsContext";
 
 const Bars = () => {
+  const { settings } = useSettings();
+  const screenWidth = settings.screenWidth;
   // Helper function to generate a random number within a range
   const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
@@ -20,6 +23,15 @@ const Bars = () => {
     num += min; // offset to min
     return num;
   };
+
+  let blockWidth = `${randomBetween(2, 7.6)}vw`;
+  if (screenWidth < 800) {
+    console.log("screenWidth < 800");
+    blockWidth = `${randomBetween(0.4, 2.1)}in`;
+  }
+
+  console.log(`screenWidth: ${screenWidth}`);
+  console.log(`blockWidth: ${blockWidth}`);
   return (
     <div className="bars">
       {[...Array(25)].map((_, i) => {
@@ -45,9 +57,9 @@ const Bars = () => {
               [i % 2 === 0 ? "bottom" : "top"]: 0,
               left:
                 i % 2 === 0
-                  ? `${bellCurveRandom(-50, 110)}vw` // For bottom blocks
-                  : `${bellCurveRandom(-10, 140)}vw`, // For top blocks
-              width: `${randomBetween(2.4, 7.2)}vw`,
+                  ? `${bellCurveRandom(-80, 140)}vw` // For bottom blocks
+                  : `${bellCurveRandom(-40, 150)}vw`, // For top blocks
+              width: `${blockWidth}`,
               height: `${randomBetween(26, 73)}vh`,
               transform: "skew(-60deg)",
               transition: "ease-in-out 0.9s",
