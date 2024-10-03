@@ -4,10 +4,10 @@ import { useSettings } from "../contexts/SettingsContext";
 import {
   FaCheckCircle,
   FaEnvelope,
-  FaGithub,
   FaInstagram,
-  FaLinkedin,
-  FaFacebook,
+  FaLinkedinIn,
+  FaFacebookF,
+  FaGithubAlt,
 } from "react-icons/fa";
 
 const Contact = () => {
@@ -46,46 +46,61 @@ const Contact = () => {
         <h1>Contact</h1>
       </header>
       <div
-        className="content-container"
+        className="content-container content-container-column"
         data-page-width={settings.contentWidth}
       >
         <form ref={form} onSubmit={sendEmail} className="contact-email-form">
           <h2>Send me an email! </h2>
           <div className="contact-input-field">
-            <h3 htmlFor="name">Name</h3>
-            <input type="text" id="name" name="user_name" required />
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              name="user_name"
+              required
+            />
           </div>
           <div className="contact-input-field">
-            <h3 htmlFor="email">Email</h3>
-            <input type="email" id="email" name="user_email" required />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              name="user_email"
+              required
+            />
           </div>
-          <div className="contact-input-field">
-            <h3 htmlFor="message">Message</h3>
-            <textarea id="message" name="message"></textarea>
+          <div className="contact-input-field contact-message">
+            <textarea
+              id="message"
+              placeholder="Type your message here..."
+              name="message"
+            ></textarea>
           </div>
-          <div className="contact-send-btn">
-            {isSent ? (
-              <div>
-                <FaCheckCircle />
-                Sent!
-              </div>
-            ) : (
-              <button type="submit">Send</button>
-            )}
+          <div className="contact-buttons">
+            <div className="contact-clear-btn">
+              <button type="reset">Clear</button>
+            </div>
+            <div className="contact-send-btn">
+              {isSent ? (
+                <div>
+                  <FaCheckCircle />
+                  Sent!
+                </div>
+              ) : (
+                <button type="submit">Send</button>
+              )}
+            </div>
           </div>
         </form>
-        <h1 className="contact-or">OR</h1>
         <div className="contact-socials-container">
-          <h2>Find me at: </h2>
           <a
             href="https://github.com/landonkimber"
             className="contact-socials-btn"
             id="github"
           >
             <i>
-              <FaGithub />
+              <FaGithubAlt />
             </i>
-            GitHub
           </a>
           <a
             href="https://www.linkedin.com/in/landon-kimber-313364303"
@@ -93,9 +108,8 @@ const Contact = () => {
             id="linkedin"
           >
             <i>
-              <FaLinkedin />
+              <FaLinkedinIn />
             </i>
-            LinkedIn
           </a>
           <a
             href="https://www.facebook.com/landonkimber"
@@ -103,9 +117,8 @@ const Contact = () => {
             id="facebook"
           >
             <i>
-              <FaFacebook />
+              <FaFacebookF />
             </i>
-            Facebook
           </a>
           <a
             href="https://www.instagram.com/landon.kimber"
@@ -115,7 +128,15 @@ const Contact = () => {
             <i>
               <FaInstagram />
             </i>
-            Instagram
+          </a>
+          <a
+            href="mailto:landonkimber33@gmail.com"
+            className="contact-socials-btn"
+            id="emailBtn"
+          >
+            <i>
+              <FaEnvelope />
+            </i>
           </a>
         </div>
       </div>

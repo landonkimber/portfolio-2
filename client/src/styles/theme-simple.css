@@ -5,14 +5,17 @@
   --red: #ff0000;
 }
 /* GENERAL STYLING */
-p,
-h2,
-h3 {
+p {
   color: var(--primary-text-color);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-h1 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--secondary-text-color);
   font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
 }
@@ -25,37 +28,53 @@ h1 {
 .basic-header h1 {
   border-bottom: var(--secondary-text-color) 1px solid;
 }
-
-/* width */
+/* Webkit browsers (Chrome, Safari, newer versions of Edge) */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--accent-color);
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: calc(var(--accent-color) + 20%);
+  background: color-mix(in srgb, var(--accent-color) 80%, white);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) grey;
+}
+
+/* For Internet Explorer and Edge Legacy */
+* {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+/* Standard properties (future-proof) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-color) grey;
+}
+
+/* Custom scrollbar for Firefox and other browsers that support it */
+@supports (scrollbar-color: var(--accent-color) grey) {
+  * {
+    scrollbar-color: var(--accent-color) grey;
+  }
 }
 
 /* NAVBAR */
 /* ----------------------------------------------------------- */
 .navbar {
-  background: linear-gradient(
-    to bottom right,
-    var(--accent-color),
-    color-mix(in srgb, var(--accent-color) 80%, var(--secondary-text-color))
-  );
+  background-color: var(--accent-color);
   box-shadow: 0 0 7px
     color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
   color: var(--primary-bg-color);
@@ -148,62 +167,82 @@ h1 {
 /* ----------------------------------------------------------- */
 
 .contact-email-form {
-  background: linear-gradient(
-    to bottom right,
-    var(--secondary-bg-color),
-    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color))
-  );
-
-  color: var(--primary-text-color);
-}
-
-.contact-email-form textarea,
-input {
-  background-color: var(--white);
+  background-color: color-mix(in srgb, var(--accent-color));
+  backdrop-filter: blur(10px);
   color: var(--primary-text-color);
 }
 
 .contact-send-btn button {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
+  border: solid 2px var(--accent-color);
+}
+.contact-send-btn button:hover,
+.contact-send-btn button:focus {
+  background-color: var(--primary-bg-color);
+  color: var(--accent-color);
+  border: solid 2px var(--accent-color);
 }
 
-.contact-socials-btn {
-  font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
-  background-color: var(--accent-color);
+.contact-clear-btn button {
+  background-color: var(--red);
   color: var(--white);
+  border: solid 2px var(--red);
+}
+.contact-clear-btn button:hover,
+.contact-clear-btn button:focus {
+  background-color: var(--primary-bg-color);
+  color: var(--red);
+  border: solid 2px var(--red);
+}
+
+.contact-input-field input,
+textarea {
+  background-color: var(--primary-bg-color);
+  color: var(--primary-text-color);
+  border: solid 2px
+    color-mix(in srgb, var(--primary-text-color) 60%, transparent);
 }
 
 #github {
   background-color: #171515;
+  color: var(--white);
+  border: solid 2px var(--white);
 }
-#github:hover {
-  border: solid 2px #171515;
+#github:hover,
+#github:focus {
   background-color: var(--white);
   color: #171515;
+  border: solid 2px #171515;
 }
 
 #linkedin {
+  color: var(--white);
   background-color: #0077b5;
+  border: solid 2px transparent;
 }
-#linkedin:hover {
-  border: solid 2px #0077b5;
-  background-color: var(--white);
+#linkedin:hover,
+#linkedin:focus {
+  background-color: var(--primary-bg-color);
   color: #0077b5;
+  border: solid 2px #0077b5;
 }
 
 #facebook {
   background-color: #3b5998;
+  color: var(--white);
+  border: solid 2px transparent;
 }
-#facebook:hover {
-  border: solid 2px #3b5998;
-  background-color: var(--white);
+#facebook:hover,
+#facebook:focus {
+  background-color: var(--primary-bg-color);
   color: #3b5998;
+  border: solid 2px #3b5998;
 }
 
 #instagram {
   background: linear-gradient(
-    to right,
+    to top right,
     #405de6,
     #5851db,
     #833ab4,
@@ -213,26 +252,113 @@ input {
   );
   background-size: 120% 120%;
   background-position: center;
+  color: var(--white);
+  border: solid 2px transparent;
 }
-#instagram:hover {
-  border: solid 2px #e1306c;
-  background: var(--white);
-  background-color: var(--white);
-  color: #e1306c;
+#instagram:hover,
+#instagram:focus {
+  background-color: var(--primary-bg-color);
+  color: #c23685;
+  border: solid 2px #c23685;
+  background: none;
+}
+
+#emailBtn {
+  background-color: var(--accent-color);
+  color: var(--primary-bg-color);
+  border: solid 2px transparent;
+}
+#emailBtn:hover,
+#emailBtn:focus {
+  background-color: var(--primary-bg-color);
+  color: var(--accent-color);
+  border: solid 2px var(--accent-color);
 }
 /* SETTINGS PAGE */
 /* ----------------------------------------------------------- */
 
 .settings-theme-container {
+  backdrop-filter: blur(10px);
   color: var(--primary-text-color);
-  background: linear-gradient(
-    to bottom right,
-    color-mix(in srgb, var(--secondary-bg-color) 90%, var(--accent-color)),
-    var(--secondary-bg-color)
-  );
 }
+
+.settings-theme-theme-menu-header,
+.settings-theme-color-menu-header {
+  background-color: var(--primary-bg-color);
+}
+.settings-theme-theme-menu h2,
+.settings-theme-color-menu h2 {
+  color: var(--accent-color);
+}
+
+.settings-checklist-container {
+  backdrop-filter: blur(10px);
+}
+
 .settings-checklist-items {
   color: var(--primary-text-color);
+}
+.settings-checklist h3 {
+  border-bottom: solid 1px var(--primary-text-color);
+}
+
+.checkbox-highlighted-true {
+  color: var(--accent-color);
+  border: var(--accent-color) 2px solid;
+}
+@media screen and (max-width: 480px) {
+  .checkbox-highlighted-true {
+    color: var(--primary-bg-color);
+    border: var(--accent-color) 2px solid;
+  }
+}
+/* THEME/COLOR BACKGROUNDS!! */
+#theme-Simple {
+  background-image: url("../../themeImages/simple-light.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fc4100;
+}
+
+#theme-Simple p {
+  color: #3b5998;
+}
+#color-Light {
+  background-color: #f5f7f8;
+  color: #fc4100;
+}
+#color-Light p {
+  color: rgb(0, 33, 94);
+}
+
+#color-Light {
+  background-color: #f5f7f8;
+  color: #fc4100;
+}
+#color-Light p {
+  color: rgb(0, 33, 94);
+}
+#color-Dark {
+  background-color: #1c1b2b;
+  color: #1bc8b6;
+}
+#color-Dark p {
+  color: rgb(236, 234, 231);
+}
+#color-Seasonal {
+  background-color: #d04848;
+  color: #0eae0e;
+}
+#color-Seasonal p {
+  color: #ffd454;
+}
+#color-Red {
+  background-color: #c02020;
+  color: #000000;
+}
+#color-Red p {
+  color: #620808;
 }
 
 /* SIGNATURE */

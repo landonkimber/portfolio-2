@@ -8,9 +8,9 @@ import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import Settings from "./pages/Settings.jsx";
 
-import Bars from "./components/Bars.jsx";
 import NavBarDefault from "./components/NavBars/NavBarDefault.jsx";
 import Signature from "./components/Signature.jsx";
+import Bars from "./components/Bars.jsx";
 
 import "./App.css";
 

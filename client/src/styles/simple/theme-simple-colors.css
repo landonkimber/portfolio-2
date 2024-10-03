@@ -1,6 +1,6 @@
 [data-color="dark"] {
   --primary-bg-color: #1c1b2b;
-  --secondary-bg-color: #0f185a;
+  --secondary-bg-color: #2e4f72;
   --primary-text-color: rgb(236, 234, 231);
   --secondary-text-color: #1bc8b6;
   --accent-color: #1bc8b6;
@@ -8,18 +8,18 @@
 }
 [data-color="light"] {
   --primary-bg-color: #f5f7f8;
-  --secondary-bg-color: #ffc55a;
+  --secondary-bg-color: #eccd1d;
   --primary-text-color: rgb(0, 33, 94);
   --secondary-text-color: #2c4e80;
   --accent-color: #fc4100;
   --white: #f3f4f5;
 }
-[data-color="colorful"] {
-  --primary-bg-color: #d04848;
-  --secondary-bg-color: #6895d2;
-  --primary-text-color: rgb(242, 239, 234);
-  --secondary-text-color: #fde767;
-  --accent-color: #f3b95f;
+[data-color="red"] {
+  --primary-bg-color: #c02020;
+  --secondary-bg-color: #c6c6c6;
+  --primary-text-color: rgb(98, 8, 8);
+  --secondary-text-color: #ffffff;
+  --accent-color: #000000;
   --white: #ebeff2;
 }
 /* January */
@@ -124,8 +124,8 @@
 /* December */
 [data-color="december"] {
   --primary-bg-color: #f7fafb;
-  --secondary-bg-color: #d2e6eb;
-  --primary-text-color: rgb(0, 100, 0);
+  --secondary-bg-color: #efbf44;
+  --primary-text-color: rgb(1, 90, 1);
   --secondary-text-color: #ff0000;
   --accent-color: #c50000;
   --white: #f7fafb;

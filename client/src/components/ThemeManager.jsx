@@ -20,8 +20,8 @@ const ThemeManager = () => {
 
     //  themePath NEEDS TO BE CHANGED FOR DEV AND DEPLOYMENT !!!
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
-    // const themePath = `/src/styles/${themeFileName}`;
-    const themePath = `/assets/${themeFileName}`;
+    const themePath = `/src/styles/${themeFileName}`;
+    // const themePath = `/assets/${themeFileName}`;
 
     // Update the href of the link
     link.href = themePath;
@@ -30,8 +30,6 @@ const ThemeManager = () => {
     if (!document.getElementById("theme-css")) {
       document.head.appendChild(link);
     }
-
-    console.log(`Applied theme: ${themePath}`);
   }, [settings.theme]);
 
   return null;

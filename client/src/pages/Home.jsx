@@ -4,7 +4,7 @@ import { FaArrowCircleDown } from "react-icons/fa";
 const Home = ({ scrollToSection }) => {
   const [isVisible, setIsVisible] = useState(false);
 
-  const timer = setTimeout(() => {
+  setTimeout(() => {
     setIsVisible(true);
   }, 5000);
 
@@ -23,7 +23,7 @@ const Home = ({ scrollToSection }) => {
             className="click-here"
             onClick={() => scrollToSection("about")}
           >
-            <FaArrowCircleDown />
+            <FaArrowCircleDown aria-hidden="true" />
           </button>
         </div>
       </div>

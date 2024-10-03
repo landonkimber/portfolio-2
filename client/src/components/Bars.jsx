@@ -1,6 +1,9 @@
 import React from "react";
+import { useSettings } from "../contexts/SettingsContext";
 
 const Bars = () => {
+  const { settings } = useSettings();
+  const screenWidth = settings.screenWidth;
   // Helper function to generate a random number within a range
   const randomBetween = (min, max) => Math.random() * (max - min) + min;
 
@@ -20,9 +23,19 @@ const Bars = () => {
     num += min; // offset to min
     return num;
   };
+
+  let blockWidth = `vw`;
+  let blockWidthRange = [3, 10];
+  let skewAngle = 57;
+  if (screenWidth < 800) {
+    console.log("screenWidth < 800");
+    blockWidth = `in`;
+    blockWidthRange = [0.3, 1.8];
+  }
+
   return (
     <div className="bars">
-      {[...Array(25)].map((_, i) => {
+      {[...Array(32)].map((_, i) => {
         const colorVars = [
           "--primary-bg-color",
           "--secondary-bg-color",
@@ -45,11 +58,14 @@ const Bars = () => {
               [i % 2 === 0 ? "bottom" : "top"]: 0,
               left:
                 i % 2 === 0
-                  ? `${bellCurveRandom(-50, 110)}vw` // For bottom blocks
-                  : `${bellCurveRandom(-10, 140)}vw`, // For top blocks
-              width: `${randomBetween(2.4, 7.2)}vw`,
+                  ? `${bellCurveRandom(-80, 140)}vw` // For bottom blocks
+                  : `${bellCurveRandom(-40, 150)}vw`, // For top blocks
+              width: `${randomBetween(
+                blockWidthRange[0],
+                blockWidthRange[1]
+              )}${blockWidth}`,
               height: `${randomBetween(26, 73)}vh`,
-              transform: "skew(-60deg)",
+              transform: `skew(-${skewAngle}deg)`,
               transition: "ease-in-out 0.9s",
               backgroundColor: `rgb(from var(${randomColorVar}) r g b / 0.03)`,
               zIndex: 0,
