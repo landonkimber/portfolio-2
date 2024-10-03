@@ -30,8 +30,6 @@ const ThemeManager = () => {
     if (!document.getElementById("theme-css")) {
       document.head.appendChild(link);
     }
-
-    console.log(`Applied theme: ${themePath}`);
   }, [settings.theme]);
 
   return null;

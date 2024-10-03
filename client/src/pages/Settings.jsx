@@ -23,7 +23,7 @@ const Settings = () => {
     contentWidth: ["Standard", "Wide"],
     navigationBar: ["Left-Handed", "Right-Handed", "Bottom"],
     theme: ["Simple", "Newspaper"],
-    color: ["Light", "Dark", "Seasonal"],
+    color: ["Light", "Dark", "Seasonal", "Red"],
   };
 
   if (settings.screenWidth < 480) {

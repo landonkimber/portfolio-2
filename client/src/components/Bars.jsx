@@ -33,11 +33,9 @@ const Bars = () => {
     blockWidthRange = [0.3, 1.8];
   }
 
-  console.log(`screenWidth: ${screenWidth}`);
-  console.log(`blockWidth: ${blockWidth}`);
   return (
     <div className="bars">
-      {[...Array(25)].map((_, i) => {
+      {[...Array(32)].map((_, i) => {
         const colorVars = [
           "--primary-bg-color",
           "--secondary-bg-color",

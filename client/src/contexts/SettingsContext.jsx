@@ -13,7 +13,6 @@ export const SettingsProvider = ({ children }) => {
 
   var screenWidth = window.innerWidth;
   var screenHeight = window.innerHeight;
-  console.log(screenWidth);
   var isVertical = screenHeight > screenWidth;
   var isMobile = "false";
 
@@ -39,7 +38,6 @@ export const SettingsProvider = ({ children }) => {
     mobile: isMobile,
   });
 
-  console.log(settings);
   // if (settings.color == "Seasonal") {
   //   if (dayjs().month() == 9) {
   //     settings.color = "september";

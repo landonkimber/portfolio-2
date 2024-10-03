@@ -1,6 +1,6 @@
 [data-color="dark"] {
   --primary-bg-color: #1c1b2b;
-  --secondary-bg-color: #0f185a;
+  --secondary-bg-color: #2e4f72;
   --primary-text-color: rgb(236, 234, 231);
   --secondary-text-color: #1bc8b6;
   --accent-color: #1bc8b6;
@@ -15,11 +15,11 @@
   --white: #f3f4f5;
 }
 [data-color="red"] {
-  --primary-bg-color: #fbfbfb;
+  --primary-bg-color: #c02020;
   --secondary-bg-color: #c6c6c6;
-  --primary-text-color: rgb(28, 1, 1);
-  --secondary-text-color: #950a0a;
-  --accent-color: #ea0707;
+  --primary-text-color: rgb(98, 8, 8);
+  --secondary-text-color: #ffffff;
+  --accent-color: #000000;
   --white: #ebeff2;
 }
 /* January */
