@@ -74,11 +74,7 @@ h6 {
 /* NAVBAR */
 /* ----------------------------------------------------------- */
 .navbar {
-  background: linear-gradient(
-    to bottom right,
-    var(--accent-color),
-    color-mix(in srgb, var(--accent-color) 80%, var(--secondary-text-color))
-  );
+  background-color: var(--accent-color);
   box-shadow: 0 0 7px
     color-mix(in srgb, var(--primary-bg-color) 70%, var(--primary-text-color));
   color: var(--primary-bg-color);
