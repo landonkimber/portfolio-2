@@ -27,6 +27,7 @@ const Settings = () => {
   };
 
   if (settings.screenWidth < 480) {
+    settings.mobile = true;
     availableSettings.navigationBar = ["Bottom"];
     availableSettings.contentWidth = ["Wide"];
   } else if (settings.screenWidth < 800) {
@@ -50,7 +51,9 @@ const Settings = () => {
         id={`${category}-${value}`}
         onClick={() => handleSettingChange(category, value)}
       >
-        <span className={`settings-checkbox`}>
+        <span
+          className={`settings-checkbox settings-checkbox-mobile-${settings.mobile}`}
+        >
           {isChecked() ? (
             <FaCheckCircle size={20} />
           ) : (
@@ -71,6 +74,9 @@ const Settings = () => {
         className="content-container content-container-column"
         data-page-width={settings.contentWidth}
       >
+        <div className="settings-checklist-header">
+          <h2>Theme Settings</h2>
+        </div>
         <div className="settings-theme-container">
           <div className="settings-theme-theme-menu">
             <div className="settings-theme-theme-menu-header">
@@ -113,41 +119,47 @@ const Settings = () => {
         </div>
         <div className="settings-checklist-container">
           <div className="settings-checklist-header">
-            <h2>General</h2>
+            <h2>General Settings</h2>
           </div>
           <div className="settings-checklist-content">
-            <h3>Font Size</h3>
-            <div className="settings-checklist-items">
-              {availableSettings.fontSize.map((size) => (
-                <ChecklistOption
-                  key={size}
-                  category="fontSize"
-                  value={size}
-                  currentValue={settings.fontSize}
-                />
-              ))}
+            <div className="settings-checklist">
+              <h3>Font Size</h3>
+              <div className="settings-checklist-items">
+                {availableSettings.fontSize.map((size) => (
+                  <ChecklistOption
+                    key={size}
+                    category="fontSize"
+                    value={size}
+                    currentValue={settings.fontSize}
+                  />
+                ))}
+              </div>
             </div>
-            <h3>Content Width</h3>
-            <div className="settings-checklist-items">
-              {availableSettings.contentWidth.map((width) => (
-                <ChecklistOption
-                  key={width}
-                  category="contentWidth"
-                  value={width}
-                  currentValue={settings.contentWidth}
-                />
-              ))}
+            <div className="settings-checklist">
+              <h3>Content Width</h3>
+              <div className="settings-checklist-items">
+                {availableSettings.contentWidth.map((width) => (
+                  <ChecklistOption
+                    key={width}
+                    category="contentWidth"
+                    value={width}
+                    currentValue={settings.contentWidth}
+                  />
+                ))}
+              </div>
             </div>
-            <h3>Navigation Bar</h3>
-            <div className="settings-checklist-items">
-              {availableSettings.navigationBar.map((nav) => (
-                <ChecklistOption
-                  key={nav}
-                  category="navigationBar"
-                  value={nav}
-                  currentValue={settings.navigationBar}
-                />
-              ))}
+            <div className="settings-checklist">
+              <h3>Navigation Bar</h3>
+              <div className="settings-checklist-items">
+                {availableSettings.navigationBar.map((nav) => (
+                  <ChecklistOption
+                    key={nav}
+                    category="navigationBar"
+                    value={nav}
+                    currentValue={settings.navigationBar}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

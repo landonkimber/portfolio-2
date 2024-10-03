@@ -24,10 +24,13 @@ const Bars = () => {
     return num;
   };
 
-  let blockWidth = `${randomBetween(2, 7.6)}vw`;
+  let blockWidth = `vw`;
+  let blockWidthRange = [3, 10];
+  let skewAngle = 57;
   if (screenWidth < 800) {
     console.log("screenWidth < 800");
-    blockWidth = `${randomBetween(0.4, 2.1)}in`;
+    blockWidth = `in`;
+    blockWidthRange = [0.3, 1.8];
   }
 
   console.log(`screenWidth: ${screenWidth}`);
@@ -59,9 +62,12 @@ const Bars = () => {
                 i % 2 === 0
                   ? `${bellCurveRandom(-80, 140)}vw` // For bottom blocks
                   : `${bellCurveRandom(-40, 150)}vw`, // For top blocks
-              width: `${blockWidth}`,
+              width: `${randomBetween(
+                blockWidthRange[0],
+                blockWidthRange[1]
+              )}${blockWidth}`,
               height: `${randomBetween(26, 73)}vh`,
-              transform: "skew(-60deg)",
+              transform: `skew(-${skewAngle}deg)`,
               transition: "ease-in-out 0.9s",
               backgroundColor: `rgb(from var(${randomColorVar}) r g b / 0.03)`,
               zIndex: 0,

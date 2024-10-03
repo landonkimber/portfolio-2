@@ -46,12 +46,12 @@
 /* GENERAL STYLING */
 /* ------------------------------------------ */
 .page-content {
-  border: black 1px solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 
 .basic-header {
@@ -91,7 +91,8 @@ p {
   z-index: 1;
   display: flex;
   justify-content: center;
-  height: 75vh;
+  height: 70vh;
+  overflow: auto;
 }
 
 .content-container-row {
@@ -678,7 +679,7 @@ textarea {
 }
 .settings-theme-color-menu-header h2,
 .settings-theme-theme-menu-header h2 {
-  font-size: calc(0.8 * var(--text-h2));
+  font-size: calc(0.5 * var(--text-h2));
   text-align: center;
   width: 100%;
   font-family: monospace;
@@ -690,13 +691,39 @@ textarea {
   height: auto;
   display: flex;
   flex-direction: column;
+  margin-top: calc(0.5 * var(--text-p));
+}
+.settings-checklist-header {
+  z-index: 2;
+  text-align: left;
 }
 .settings-checklist-content {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+}
+.settings-checklist {
+  width: 33%;
+  text-align: left;
+  padding: 1%;
+}
+.settings-checklist h3 {
+  margin-bottom: calc(0.5 * var(--text-p));
+}
+.settings-checklist-items > * {
+  border-radius: 5px;
+  margin-bottom: calc(0.5 * var(--text-p));
+  display: flex;
+  align-items: center;
+  padding: calc(0.3 * var(--text-p));
+}
+.settings-checklist-items p {
+  font-size: calc(0.9 * var(--text-p));
+  margin-left: calc(0.3 * var(--text-p));
+  margin-bottom: calc(0.1 * var(--text-p));
 }
 
-.settings-theme-theme-list {
+.settings-checklist- .settings-theme-theme-list {
   padding: 2%;
   width: 100%;
 }
@@ -738,9 +765,17 @@ textarea {
   cursor: pointer;
 }
 
+.settings-checkbox-mobile-true {
+  display: none;
+}
+
 @media screen and (width < 480px) {
   .settings-theme-theme-list p {
     font-size: calc(0.8 * var(--text-p));
+  }
+  .settings-theme-theme-list > * {
+    height: calc(2 * var(--text-p));
+    padding-left: 0;
   }
   .settings-theme-color-list p {
     font-size: calc(0.7 * var(--text-p));

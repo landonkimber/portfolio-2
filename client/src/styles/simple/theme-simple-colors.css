@@ -124,8 +124,8 @@
 /* December */
 [data-color="december"] {
   --primary-bg-color: #f7fafb;
-  --secondary-bg-color: #d2e6eb;
-  --primary-text-color: rgb(0, 100, 0);
+  --secondary-bg-color: #efbf44;
+  --primary-text-color: rgb(1, 90, 1);
   --secondary-text-color: #ff0000;
   --accent-color: #c50000;
   --white: #f7fafb;

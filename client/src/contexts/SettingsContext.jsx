@@ -15,10 +15,12 @@ export const SettingsProvider = ({ children }) => {
   var screenHeight = window.innerHeight;
   console.log(screenWidth);
   var isVertical = screenHeight > screenWidth;
+  var isMobile = "false";
 
   var defaultWidth = "Standard";
   var defaultNavigation = "Right-Handed";
   if (isVertical && screenWidth < 600) {
+    isMobile = "true";
     defaultNavigation = "Bottom";
     defaultWidth = "Wide";
   } else if (!isVertical && screenWidth < 1000) {
@@ -34,6 +36,7 @@ export const SettingsProvider = ({ children }) => {
     color: defaultColor,
     screenHeight: screenHeight,
     screenWidth: screenWidth,
+    mobile: isMobile,
   });
 
   console.log(settings);
