@@ -1,54 +1,64 @@
-# React Portfolio Version 2
+# 🚀 React Portfolio Version 2
 
-## Description
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)
 
-This is my second attempt at creating a responsive, customizable, static react portfolio! This application uses a scrollable approach to better engage mobile users as most people posses own and frequently use their smartphones. At the bottom of the page, you'll find a settings section that demonstrates multiple art/design styles, options for better accessibility, and a dynamic day/night mode.
+## 📖 Description
 
-## Table of Contents
+Welcome to the second iteration of my responsive, customizable, and static React portfolio! This application takes a scrollable approach to enhance engagement for mobile users, recognizing the prevalence of smartphone usage. At the bottom of the page, you'll discover a settings section showcasing various art/design styles, accessibility options, and a dynamic day/night mode.
 
-- [Project Title](#project-title)
-- [Description](#description)
-- [Table of Contents](#table-of-contents)
-- [Features](#features)
-- [Contributions](#contributions)
-- [Contact](#contact)
+## 🗂️ Table of Contents
 
-## Features
+- [Features](#-features)
+- [Contributions](#-contributions)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [License](#-license)
+- [Contact](#-contact)
 
-This app uses DayJS along with EmailJS API's.
+## 🌟 Features
 
-## Contributions
+This portfolio application leverages several powerful tools and APIs:
 
-This site was built using JavaScript, HTML5, CSS3, React, Vite, Eslint, and is hosted through Netlify!
+- [📅 DayJS](https://day.js.org/): A minimalist JavaScript library for modern browsers with a largely Moment.js-compatible API.
+- [✉️ EmailJS](https://www.emailjs.com/): Send emails directly from your client-side JavaScript code – no server side code required.
 
-This site uses assets from Unsplash and React-Icons.
+## 🛠️ Contributions
 
-## License
+This site was built using:
 
-MIT License
+- [⚛️ React](https://reactjs.org/): A JavaScript library for building user interfaces.
+- [⚡ Vite](https://vitejs.dev/): A build tool that aims to provide a faster and leaner development experience for modern web projects.
+- [🔍 ESLint](https://eslint.org/): A static code analysis tool for identifying problematic patterns found in JavaScript code.
+- [🌐 Netlify](https://www.netlify.com/): An all-in-one platform for automating modern web projects.
 
-Copyright (c) 2024 Landon Kimber
+Additional resources:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- [📸 Unsplash](https://unsplash.com/): Beautiful, free images and photos.
+- [🎨 React-Icons](https://react-icons.github.io/react-icons/): A collection of popular icons for React projects. ```
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+## 💻 Usage
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+After starting the development server, open your browser and navigate to `http://localhost:3000` (or the port specified in your console). Explore the different sections of the portfolio and try out the customization options in the settings section!
 
-## Contact
+## 📜 License
 
-Created by Landon Kimber
-Email: landonkimber33@gmail.com
-Github Profile: https://github.com/landonkimber
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## 📞 Contact
+
+Created with ❤️ by Landon Kimber
+
+- 📧 Email: [landonkimber33@gmail.com](mailto:landonkimber33@gmail.com)
+- 💼 GitHub: [landonkimber](https://github.com/landonkimber)
+- 🌐 Portfolio: https://landonkimber.com/
+
+Feel free to reach out if you have any questions or just want to connect!
+
+---
+
+⭐️ If you find this project interesting or useful, please consider giving it a star on GitHub!

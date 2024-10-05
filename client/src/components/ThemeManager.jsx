@@ -20,7 +20,11 @@ const ThemeManager = () => {
 
     //  themePath NEEDS TO BE CHANGED FOR DEV AND DEPLOYMENT !!!
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
+
+    // FOR DEV vvv
     // const themePath = `/src/styles/${themeFileName}`;
+
+    // FOR DEPLOYMENT vvv
     const themePath = `/assets/${themeFileName}`;
 
     // Update the href of the link
