@@ -560,6 +560,32 @@ textarea {
   margin-top: var(--text-h3);
   border-radius: 2px;
   font-size: var(--text-p);
+  cursor: pointer;
+}
+
+.contact-buttons #contact-sent {
+  display: flex;
+  align-items: center;
+  height: calc(1.2 * var(--text-h3));
+  width: fit-content;
+  padding-left: var(--text-p);
+  padding-right: var(--text-p);
+  margin-left: var(--text-h1);
+  margin-right: var(--text-h1);
+  margin-top: var(--text-h3);
+  border-radius: 2px;
+  font-size: var(--text-p);
+  user-select: none;
+  cursor: default;
+}
+
+.contact-buttons #contact-sent p {
+  margin-right: calc(0.5 * var(--text-p));
+  font-size: calc(1.1 * var(--text-p));
+  transform: skew(-12deg);
+}
+.contact-buttons #contact-sent i {
+  transform: skew(-12deg);
 }
 
 .contact-socials-container {
@@ -618,7 +644,8 @@ textarea {
     height: 8%;
     margin-bottom: calc(0.5 * var(--text-p));
   }
-  .contact-buttons button {
+  .contact-buttons button,
+  .contact-buttons div {
     margin-left: 0;
     margin-right: 0;
   }

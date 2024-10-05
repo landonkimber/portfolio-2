@@ -78,16 +78,28 @@ const Contact = () => {
           </div>
           <div className="contact-buttons">
             <div className="contact-clear-btn">
-              <button type="reset">Clear</button>
+              {isSent ? (
+                <button type="reset">
+                  <p>Reset</p>
+                </button>
+              ) : (
+                <button type="clear">
+                  <p>Clear</p>
+                </button>
+              )}
             </div>
             <div className="contact-send-btn">
               {isSent ? (
-                <div>
-                  <FaCheckCircle />
-                  Sent!
-                </div>
+                <button id="contact-sent">
+                  <p>Sent!</p>
+                  <i>
+                    <FaCheckCircle />
+                  </i>
+                </button>
               ) : (
-                <button type="submit">Send</button>
+                <button type="submit">
+                  <p>Send</p>
+                </button>
               )}
             </div>
           </div>

@@ -174,26 +174,52 @@ h6 {
 
 .contact-send-btn button {
   background-color: var(--accent-color);
-  color: var(--primary-bg-color);
+  color: var(--white);
   border: solid 2px var(--accent-color);
 }
+.contact-send-btn button p {
+  color: var(--white);
+}
+
 .contact-send-btn button:hover,
 .contact-send-btn button:focus {
   background-color: var(--primary-bg-color);
-  color: var(--accent-color);
   border: solid 2px var(--accent-color);
+}
+.contact-send-btn button:hover p,
+.contact-send-btn button:focus p {
+  color: var(--accent-color);
 }
 
 .contact-clear-btn button {
   background-color: var(--red);
-  color: var(--white);
   border: solid 2px var(--red);
 }
+.contact-clear-btn button p {
+  color: var(--white);
+}
+
 .contact-clear-btn button:hover,
 .contact-clear-btn button:focus {
   background-color: var(--primary-bg-color);
   color: var(--red);
   border: solid 2px var(--red);
+}
+.contact-clear-btn button:hover p,
+.contact-clear-btn button:focus p {
+  color: var(--red);
+}
+
+.contact-buttons #contact-sent {
+  color: var(--primary-text-color);
+  background: transparent;
+  border: solid 2px var(--accent-color);
+}
+.contact-buttons #contact-sent p {
+  color: var(--accent-color);
+}
+.contact-buttons #contact-sent i {
+  color: var(--accent-color);
 }
 
 .contact-input-field input,
