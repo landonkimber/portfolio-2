@@ -18,9 +18,9 @@ const ThemeManager = () => {
 
     // Construct the path to the theme CSS file
 
-    //  themePath NEEDS TO BE CHANGED FOR DEV AND DEPLOYMENT !!!
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
 
+    //  themePath NEEDS TO BE CHANGED FOR DEV AND DEPLOYMENT !!!
     // FOR DEV vvv
     // const themePath = `/src/styles/${themeFileName}`;
 

@@ -19,12 +19,6 @@ const projects = [
   },
   {
     id: 3,
-    title: "Portfolio",
-    imgName: "portfolio",
-    description: "Description for Project 3",
-  },
-  {
-    id: 4,
     title: "More coming soon!",
     imgName: "coming-soon",
   },

@@ -22,9 +22,16 @@ const Settings = () => {
     fontSize: ["Small", "Standard", "Large"],
     contentWidth: ["Standard", "Wide"],
     navigationBar: ["Left-Handed", "Right-Handed", "Bottom"],
-    theme: ["Simple", "Newspaper"],
+    theme: ["Simple"],
     color: ["Light", "Dark", "Seasonal", "Red"],
   };
+
+  // THEME IDEAS!!!
+  /*
+  NEWSPAPER
+  RIVER/CITY (TOP PAGE IS CITY, and as you scroll down it becomes a river)
+  TailwindCSS (just to show I can do it)
+  */
 
   if (settings.screenWidth < 480) {
     settings.mobile = true;
