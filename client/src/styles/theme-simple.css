@@ -18,6 +18,7 @@ h5,
 h6 {
   color: var(--secondary-text-color);
   font-family: "Lucida Sans", "Lucida Sans Regular", Verdana, sans-serif;
+  user-select: none;
 }
 
 .page-content {
