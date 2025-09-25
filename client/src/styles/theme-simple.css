@@ -132,10 +132,9 @@ h6 {
 /* PROJECTS PAGE */
 /* ----------------------------------------------------------- */
 .project-card {
+  background-color: color-mix(in srgb, var(--accent-color));
   backdrop-filter: blur(10px);
-  background-color: color-mix(in srgb, var(--accent-color) 8%, transparent);
   color: var(--primary-text-color);
-  border: solid 2px color-mix(in srgb, var(--accent-color) 60%, transparent);
 }
 
 .project-card-expand {
@@ -146,6 +145,7 @@ h6 {
 .project-card-expand:focus {
   background-color: var(--primary-text-color);
   color: var(--secondary-bg-color);
+  cursor: pointer;
 }
 
 .project-card-view {
@@ -158,10 +158,10 @@ h6 {
   background-color: var(--primary-text-color);
   color: var(--secondary-bg-color);
   border: solid 2px var(--secondary-bg-color);
+  cursor: pointer;
 }
 .project-card-title {
   color: var(--primary-text-color);
-  border-bottom: solid 1px var(--primary-text-color);
 }
 
 /* CONTACT ME PAGE */
