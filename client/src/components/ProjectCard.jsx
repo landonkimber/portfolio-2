@@ -10,7 +10,7 @@ const ProjectCard = ({ title, description, imgName, onClick }) => {
           <FaExpandAlt />
         </button>
       ) : null}
-      <h3 className="project-card-title">{title}</h3>
+      <h3 className="project-card-title  ubuntu-bold">{title}</h3>
       <img
         src={projectImage}
         className="project-card-image"

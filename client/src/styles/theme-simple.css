@@ -3,6 +3,7 @@
 
 :root {
   --red: #ff0000;
+  --white: #e2e2e2;
 }
 /* GENERAL STYLING */
 p {
@@ -162,6 +163,45 @@ h6 {
 }
 .project-card-title {
   color: var(--primary-text-color);
+}
+
+/* PROJECT MODAL */
+/* ----------------------------------------------------------- */
+.project-modal {
+  background: rgba(74, 74, 74, 0.591);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.project-modal-link-button {
+  background: green;
+  color: white;
+}
+
+.project-modal-github-button {
+  background: black;
+  color: white;
+}
+
+.project-modal-link-button:hover {
+  background: white;
+  color: green;
+  cursor: pointer;
+}
+
+.project-modal-github-button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.close-button {
+  color: var(--white);
+}
+.close-button:hover {
+  color: var(--red);
+  background-color: var(--white);
+  cursor: pointer;
 }
 
 /* CONTACT ME PAGE */
