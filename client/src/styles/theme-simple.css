@@ -3,6 +3,7 @@
 
 :root {
   --red: #ff0000;
+  --white: #e2e2e2;
 }
 /* GENERAL STYLING */
 p {
@@ -132,10 +133,9 @@ h6 {
 /* PROJECTS PAGE */
 /* ----------------------------------------------------------- */
 .project-card {
+  background-color: color-mix(in srgb, var(--accent-color));
   backdrop-filter: blur(10px);
-  background-color: color-mix(in srgb, var(--accent-color) 8%, transparent);
   color: var(--primary-text-color);
-  border: solid 2px color-mix(in srgb, var(--accent-color) 60%, transparent);
 }
 
 .project-card-expand {
@@ -146,6 +146,7 @@ h6 {
 .project-card-expand:focus {
   background-color: var(--primary-text-color);
   color: var(--secondary-bg-color);
+  cursor: pointer;
 }
 
 .project-card-view {
@@ -158,10 +159,49 @@ h6 {
   background-color: var(--primary-text-color);
   color: var(--secondary-bg-color);
   border: solid 2px var(--secondary-bg-color);
+  cursor: pointer;
 }
 .project-card-title {
   color: var(--primary-text-color);
-  border-bottom: solid 1px var(--primary-text-color);
+}
+
+/* PROJECT MODAL */
+/* ----------------------------------------------------------- */
+.project-modal {
+  background: rgba(74, 74, 74, 0.591);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+
+.project-modal-link-button {
+  background: green;
+  color: white;
+}
+
+.project-modal-github-button {
+  background: black;
+  color: white;
+}
+
+.project-modal-link-button:hover {
+  background: white;
+  color: green;
+  cursor: pointer;
+}
+
+.project-modal-github-button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+.close-button {
+  color: var(--white);
+}
+.close-button:hover {
+  color: var(--red);
+  background-color: var(--white);
+  cursor: pointer;
 }
 
 /* CONTACT ME PAGE */
