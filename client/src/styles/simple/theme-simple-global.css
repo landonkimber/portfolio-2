@@ -425,7 +425,7 @@ p {
   margin-bottom: 1%;
   margin-top: 3%;
   width: auto;
-  max-height: 50%;
+  max-height: 70%;
   border-radius: 5px;
 }
 
@@ -477,9 +477,9 @@ p {
 
   .project-card img {
     position: absolute;
-    left: 10%;
-    bottom: 10%;
-    width: auto;
+    align-self: center;
+    width: 50%;
+    bottom: 6%;
     max-height: 60%;
     border-radius: 5px;
   }
@@ -492,6 +492,7 @@ p {
 @media screen and (max-width: 800px) {
   .project-card-title {
     font-size: calc(0.7 * var(--text-h3));
+    width: 100%;
   }
 }
 
@@ -501,6 +502,9 @@ p {
   }
   .project-card-title {
     font-size: calc(0.7 * var(--text-h3));
+  }
+  .project-card-expand {
+    top: 30%;
   }
 }
 /* PROJECT MODAL */
@@ -515,21 +519,33 @@ p {
   border-radius: 5px;
   z-index: 10;
 }
-.project-modal-h1 {
-  height: 100%;
-  width: fit-content;
-  align-content: center;
-  font-size: calc(1.1 * var(--text-h1, 3.3rem));
-  margin-left: calc(1.8 * var(--text-h1, 3.3rem));
-}
 
 .project-modal-header {
   width: 100%;
   height: 15%;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+.project-modal-h1 {
+  height: 100%;
+  min-width: 75%;
+  text-align: left;
+  margin-left: var(--text-p, 1.2rem);
+  align-content: center;
+  font-size: calc(1.1 * var(--text-h1, 3.3rem));
+}
+
+.close-button {
+  height: calc(1.2 * var(--text-h1, 3.3rem));
+  width: calc(1.2 * var(--text-h1, 3.3rem));
+  background: red;
+  font-size: var(--text-h1, 3.3rem);
+  font-weight: bold;
+  border-radius: 100%;
+  border: none;
+  margin-right: calc(0.6 * var(--text-p, 1.2rem));
+  margin-left: calc(0.6 * var(--text-p, 1.2rem));
 }
 
 .project-modal-content {
@@ -552,6 +568,7 @@ p {
   display: flex;
   flex-direction: row;
 }
+
 .project-modal-image {
   width: 95%;
   max-width: 95%;
@@ -565,6 +582,15 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.project-modal-button-container {
+  width: 100%;
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
 }
 
 .project-modal-link-button {
@@ -593,6 +619,10 @@ p {
   padding: calc(0.8 * var(--text-h3, 2rem));
   border-radius: calc(2 * var(--text-h1, 3.3rem));
   border: none;
+  margin-top: calc(0.8 * var(--text-h3, 2rem));
+}
+.project-modal-github-button a {
+  text-decoration: none;
 }
 
 .project-modal-button-icon {
@@ -601,19 +631,74 @@ p {
   padding-right: calc(0.7 * var(--text-h3, 2rem));
 }
 
-.close-button {
-  height: calc(1.2 * var(--text-h1, 3.3rem));
-  width: calc(1.2 * var(--text-h1, 3.3rem));
-  background: red;
-  font-size: var(--text-h1, 3.3rem);
-  font-weight: bold;
-  border-radius: 100%;
-  border: none;
-  margin-right: calc(1 * var(--text-h1, 3.3rem));
-}
-
 .red-border {
   border: 2px solid red;
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and ((max-width: 480px) or (orientation: portrait)) {
+  .project-modal {
+    width: 75vw;
+    height: 70vh;
+    background-color: aquamarine;
+  }
+  .project-modal-header {
+    justify-content: end;
+  }
+
+  .project-modal-h1 {
+    font-size: calc(0.5 * var(--text-h1, 3.3rem));
+  }
+
+  .project-modal-left-container {
+    height: 60%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .project-modal-tools {
+    border: 1px solid green;
+    height: 40%;
+  }
+
+  .project-modal-right-container {
+    height: 40%;
+    width: 100%;
+    flex-direction: column;
+  }
+  .project-modal-button-container {
+    flex-direction: row;
+  }
+  .project-modal-image {
+    max-height: 95%;
+    align-self: center;
+    left: -50%;
+    padding-left: 0;
+  }
+
+  .close-button {
+    height: calc(0.67 * var(--text-h1, 3.3rem));
+    width: calc(0.67 * var(--text-h1, 3.3rem));
+    font-size: calc(0.6 * var(--text-h1, 3.3rem));
+  }
+  .project-modal-content {
+    flex-direction: column;
+    font-size: calc(0.4 * var(--text-h3, 2rem));
+  }
+  .project-modal-createdOn {
+    font-size: calc(0.4 * var(--text-h3, 2rem));
+  }
+
+  .project-modal-link-button {
+    width: 40%;
+    font-size: calc(0.8 * var(--text-h3, 2rem));
+  }
+
+  .project-modal-github-button {
+    width: 40%;
+    font-size: calc(0.4 * var(--text-h3, 2rem));
+  }
 }
 
 /* CONTACT PAGE */
