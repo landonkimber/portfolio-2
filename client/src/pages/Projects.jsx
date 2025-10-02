@@ -80,23 +80,25 @@ const ProjectModal = ({ project, onClose }) => {
           </div>
           {/* RIGHT SIDE */}
           <div className="project-modal-right-container">
-            <p className="project-modal-createdOn">
-              Created on : {project.createdOn}
-            </p>
-            <p className="project-modal-description">{project.description}</p>
-            <br />
-            <h2>{project.url}</h2>
+            <div className="project-modal-details">
+              <p className="project-modal-createdOn">
+                Created on : {project.createdOn}
+              </p>
+              <p className="project-modal-description">{project.description}</p>
+              <br />
+              <h2>{project.url}</h2>
+            </div>
             <div className="project-modal-button-container">
               <a href={project.url} className="project-modal-link-button">
-                <button className="project-modal-visit">
-                  Visit Here!
-                  <FaArrowRight />
-                </button>
+                Visit Here!
+                <FaArrowRight className="modal-icon" />
               </a>
-              <a href={project.githubUrl}>
-                <button className="project-modal-link-button">
-                  <FaGithubAlt className /> Project Github Repo
-                </button>
+              <a
+                href={project.githubUrl}
+                className="project-modal-github-button"
+              >
+                Github Repo
+                <FaGithubAlt className="modal-icon" />
               </a>
             </div>
           </div>

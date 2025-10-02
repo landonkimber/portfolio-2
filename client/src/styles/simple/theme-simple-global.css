@@ -414,11 +414,16 @@ p {
   width: 44%;
   height: 45%;
   margin: 1%;
-
+  transition: transform 0.3s ease, border 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+.project-card:hover {
+  transform: scale(107%);
+  cursor: pointer;
+  border: 3px solid white;
 }
 
 .project-card img {
@@ -426,6 +431,8 @@ p {
   margin-top: 3%;
   width: auto;
   max-height: 70%;
+  max-width: 90%;
+  overflow: hidden;
   border-radius: 5px;
 }
 
@@ -581,51 +588,70 @@ p {
   width: 40%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+}
+
+.project-modal-details {
+  height: 66%;
+  padding: 4%;
+  padding-top: 0;
+  overflow: scroll;
+}
+.project-modal-button-container {
+  height: 33%;
+  justify-content: space-around;
 }
 
 .project-modal-button-container {
   width: 100%;
-  border: 1px solid orange;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
+  padding: 3%;
 }
 
 .project-modal-link-button {
   width: 80%;
-  height: auto;
+  height: calc(1.4 * var(--text-h3, 2rem));
   align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  font-size: calc(0.8 * var(--text-h3, 2rem));
-  padding: calc(0.8 * var(--text-h3, 2rem));
+  font-size: calc(0.7 * var(--text-h3, 2rem));
+  padding: calc(0.2 * var(--text-h3, 2rem));
   border-radius: calc(2 * var(--text-h1, 3.3rem));
   border: none;
+  font-family: Arial;
+  transition: transform 0.3s ease, border 0.3s ease;
+  overflow: hidden;
 }
 
 .project-modal-github-button {
   width: 80%;
-  height: auto;
+  height: calc(1.4 * var(--text-h3, 2rem));
   align-self: center;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
   font-size: calc(0.8 * var(--text-h3, 2rem));
-  padding: calc(0.8 * var(--text-h3, 2rem));
+  padding: calc(0.2 * var(--text-h3, 2rem));
   border-radius: calc(2 * var(--text-h1, 3.3rem));
   border: none;
-  margin-top: calc(0.8 * var(--text-h3, 2rem));
+  font-family: Arial;
+  transition: transform 0.3s ease, border 0.3s ease;
+  overflow: hidden;
 }
 .project-modal-github-button a {
   text-decoration: none;
 }
+.project-modal-link-button:hover,
+.project-modal-github-button:hover {
+  transform: scale(105%);
+}
 
-.project-modal-button-icon {
+.modal-icon {
   font-size: calc(1.2 * var(--text-h3, 2rem));
   padding-left: calc(0.7 * var(--text-h3, 2rem));
   padding-right: calc(0.7 * var(--text-h3, 2rem));
@@ -635,7 +661,48 @@ p {
   border: 2px solid red;
 }
 
-@media screen and (max-width: 800px) {
+/* For Chrome, Safari and Opera */
+.project-modal-details::-webkit-scrollbar {
+  display: none;
+}
+
+/* Internet Explorer, Edge */
+.project-modal-details {
+  -ms-overflow-style: none;
+}
+
+/* Firefox */
+.project-modal-details {
+  scrollbar-width: none;
+}
+@media screen and (max-width: 1100px) {
+  .project-modal-h1 {
+    font-size: calc(0.8 * var(--text-h1, 3.3rem));
+  }
+
+  .project-modal-image {
+    max-width: 90%;
+  }
+
+  .close-button {
+    height: calc(0.67 * var(--text-h1, 3.3rem));
+    width: calc(0.67 * var(--text-h1, 3.3rem));
+    font-size: calc(0.6 * var(--text-h1, 3.3rem));
+  }
+  .project-modal-content {
+    font-size: calc(0.6 * var(--text-h3, 2rem));
+  }
+  .project-modal-createdOn {
+    font-size: calc(0.6 * var(--text-h3, 2rem));
+  }
+
+  .project-modal-link-button {
+    font-size: calc(0.7 * var(--text-h3, 2rem));
+  }
+
+  .modal-icon {
+    font-size: calc(0.9 * var(--text-h3, 2rem));
+  }
 }
 
 @media screen and ((max-width: 480px) or (orientation: portrait)) {
@@ -653,22 +720,30 @@ p {
   }
 
   .project-modal-left-container {
-    height: 60%;
+    height: 50%;
     width: 100%;
     flex-direction: column;
   }
   .project-modal-tools {
-    border: 1px solid green;
     height: 40%;
   }
 
   .project-modal-right-container {
-    height: 40%;
+    height: 50%;
     width: 100%;
     flex-direction: column;
   }
+
+  .project-modal-details {
+    height: 66%;
+    overflow: scroll;
+    overflow-x: hidden;
+  }
+
   .project-modal-button-container {
+    height: 33%;
     flex-direction: row;
+    justify-content: space-around;
   }
   .project-modal-image {
     max-height: 95%;
@@ -691,13 +766,30 @@ p {
   }
 
   .project-modal-link-button {
-    width: 40%;
-    font-size: calc(0.8 * var(--text-h3, 2rem));
+    width: 30%;
+    height: calc(1 * var(--text-h3, 2rem));
+    font-size: calc(0.5 * var(--text-h3, 2rem));
+    padding: 5%;
+    margin: 4px;
+    transition: transform 0.3s ease, border 0.3s ease;
   }
 
   .project-modal-github-button {
-    width: 40%;
-    font-size: calc(0.4 * var(--text-h3, 2rem));
+    width: 30%;
+    height: calc(1 * var(--text-h3, 2rem));
+    font-size: calc(0.5 * var(--text-h3, 2rem));
+    display: flex;
+    padding: 5%;
+    margin: 4px;
+    transition: transform 0.3s ease, border 0.3s ease;
+  }
+
+  .modal-icon {
+    padding-left: 0;
+    padding-right: calc(0.2 * var(--text-h3, 2rem));
+    height: calc(0.8 * var(--text-h3, 2rem));
+    width: calc(0.8 * var(--text-h3, 2rem));
+    font-size: calc(0.8 * var(--text-h3, 2rem));
   }
 }
 

@@ -137,6 +137,9 @@ h6 {
   backdrop-filter: blur(10px);
   color: var(--primary-text-color);
 }
+.project-card:hover {
+  background-color: var(--secondary-text-color);
+}
 
 .project-card-expand {
   color: var(--primary-text-color);
