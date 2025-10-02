@@ -4,9 +4,9 @@ const ProjectCard = ({ title, description, imgName, onClick }) => {
   const projectImage = `/projectImages/project-${imgName.toLowerCase()}.png`;
 
   return (
-    <div className="project-card">
+    <div className="project-card" onClick={onClick}>
       {description ? (
-        <button className="project-card-expand" onClick={onClick}>
+        <button className="project-card-expand">
           <FaExpandAlt />
         </button>
       ) : null}
@@ -16,11 +16,6 @@ const ProjectCard = ({ title, description, imgName, onClick }) => {
         className="project-card-image"
         alt={`${title} project`}
       ></img>
-      {description ? (
-        <button className="project-card-view" onClick={onClick}>
-          View more
-        </button>
-      ) : null}
     </div>
   );
 };

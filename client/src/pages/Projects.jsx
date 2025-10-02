@@ -60,7 +60,7 @@ const ProjectModal = ({ project, onClose }) => {
   const projectImage = `/projectImages/project-${project.imgName.toLowerCase()}.png`;
   return (
     <ModalPortal>
-      <div className=" test-modal project-modal">
+      <div className="project-modal">
         <div className="project-modal-header">
           <h1 className="project-modal-h1 ubuntu-bold">{project.title}</h1>
           <button onClick={onClose} className="close-button">
@@ -70,35 +70,37 @@ const ProjectModal = ({ project, onClose }) => {
         <div className="project-modal-content">
           {/* LEFT SIDE */}
           <div className="project-modal-left-container">
-            <div className="project-modal-image">
-              <img
-                src={projectImage}
-                alt={project.title}
-                className="project-modal-image"
-              />
-            </div>
+            <img
+              src={projectImage}
+              alt={project.title}
+              className="project-modal-image"
+            />
+
             <div className="project-modal-tools"></div>
           </div>
           {/* RIGHT SIDE */}
           <div className="project-modal-right-container">
-            <p className="project-modal-createdOn">
-              Created on : {project.createdOn}
-            </p>
-            <p className="project-modal-description">{project.description}</p>
-            <br />
-            <h2>{project.url}</h2>
-            <a href={project.url}>
-              <button className="project-modal-link-button">
+            <div className="project-modal-details">
+              <p className="project-modal-createdOn">
+                Created on : {project.createdOn}
+              </p>
+              <p className="project-modal-description">{project.description}</p>
+              <br />
+              <h2>{project.url}</h2>
+            </div>
+            <div className="project-modal-button-container">
+              <a href={project.url} className="project-modal-link-button">
                 Visit Here!
-                <FaArrowRight className="project-modal-button-icon" />
-              </button>
-            </a>
-            <a href={project.githubUrl}>
-              <button className="project-modal-github-button">
-                <FaGithubAlt className="project-modal-button-icon" /> Project
+                <FaArrowRight className="modal-icon" />
+              </a>
+              <a
+                href={project.githubUrl}
+                className="project-modal-github-button"
+              >
                 Github Repo
-              </button>
-            </a>
+                <FaGithubAlt className="modal-icon" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
