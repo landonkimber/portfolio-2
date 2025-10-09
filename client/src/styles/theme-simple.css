@@ -22,6 +22,10 @@ h6 {
   user-select: none;
 }
 
+a:visited {
+  color: rgb(136, 0, 255);
+}
+
 .page-content {
   background-color: var(--primary-bg-color);
   box-shadow: var(--secondary-bg-color) 15;
@@ -176,12 +180,14 @@ h6 {
   color: white;
 }
 
-.project-modal-link-button {
+.project-modal-link-button,
+.project-modal-link-button:visited {
   background: green;
   color: white;
 }
 
-.project-modal-github-button {
+.project-modal-github-button,
+.project-modal-github-button:visited {
   background: black;
   color: white;
 }
