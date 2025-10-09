@@ -15,17 +15,17 @@ const ThemeManager = () => {
       document.getElementById("theme-css") || document.createElement("link");
     link.rel = "stylesheet";
     link.id = "theme-css";
-
     // Construct the path to the theme CSS file
-
     const themeFileName = `theme-${settings.theme.toLowerCase()}.css`;
 
+    // ----------------------------------------------------------------
     //  themePath NEEDS TO BE CHANGED FOR DEV AND DEPLOYMENT !!!
     // FOR DEV vvv
     // const themePath = `/src/styles/${themeFileName}`;
 
     // FOR DEPLOYMENT vvv
     const themePath = `/assets/${themeFileName}`;
+    // ----------------------------------------------------------------
 
     // Update the href of the link
     link.href = themePath;

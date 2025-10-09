@@ -44,9 +44,9 @@ const projects = [
     title: "Cornerstone",
     imgName: "cornerstone",
     description:
-      "This is a website that was made for Cornerstone Franchising. A simple site made using with Vite + React.",
-    url: "",
-    githubUrl: "https://github.com/landonkimber/cornerstone-franchise-site",
+      "This is a website that was made for Cornerstone Franchising. A multi-page site created for the Cornerstone Franchising Partners company. This site was created using Wix.com.",
+    url: "https://www.cornerstonefranchisepartners.com/",
+    githubUrl: "",
     createdOn: "June 10, 2024",
   },
 ];
@@ -86,20 +86,28 @@ const ProjectModal = ({ project, onClose }) => {
               </p>
               <p className="project-modal-description">{project.description}</p>
               <br />
-              <h2>{project.url}</h2>
+              <a href={project.url}>
+                <h2 className="underlined">{project.url}</h2>
+              </a>
             </div>
             <div className="project-modal-button-container">
               <a href={project.url} className="project-modal-link-button">
                 Visit Here!
                 <FaArrowRight className="modal-icon" />
               </a>
-              <a
-                href={project.githubUrl}
-                className="project-modal-github-button"
-              >
-                Github Repo
-                <FaGithubAlt className="modal-icon" />
-              </a>
+              {project.githubUrl ? (
+                <a
+                  href={project.githubUrl}
+                  className="project-modal-github-button"
+                >
+                  Github Repo
+                  <FaGithubAlt className="modal-icon" />
+                </a>
+              ) : (
+                <a className="project-modal-github-button">
+                  Repo Not Available
+                </a>
+              )}
             </div>
           </div>
         </div>
